@@ -1,0 +1,48 @@
+.Navbar{
+
+    background-color: var(--dark-blue);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 3;
+
+    &__header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2vh 0;
+
+        &__name{
+            color: white;
+            display: inline;
+            flex-basis: 30vw;
+            font-size: 3rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        &__link{
+            color: white;
+            font-size: 1.5rem;
+            margin: 0;
+            transition: all .5s; 
+            box-shadow: none;
+            background-color: transparent;
+            padding: .3rem .5rem;
+            border-radius: 10px;
+
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: 0 1rem 3rem rgba(0,0,0, .5);
+                background-color: var(--hover-color);
+            }
+        }
+    }
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+

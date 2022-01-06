@@ -1,0 +1,14 @@
+@mixin pageButtonHover {
+    &:hover{
+        transform: scale(.95);
+        box-shadow: none;
+        background-color: var(--hover-color);
+    }
+}
+
+@mixin pageButtonNotHover {
+    background-color: var(--dark-blue);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+    cursor: pointer;
+    transition: all .5s;  
+}

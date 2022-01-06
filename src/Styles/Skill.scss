@@ -1,0 +1,11 @@
+.Skill{
+    &__name{
+        font-size: 1.5rem;
+        border-radius: 10px;
+        width: max-content;
+        padding: .2rem .5rem;
+        background-color: var(--hover-color);
+        color: white;
+        margin-right: 1rem;
+    }
+}

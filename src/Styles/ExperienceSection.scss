@@ -1,0 +1,42 @@
+@import './Variables.scss';
+
+.ExperienceSection{
+    margin-top: 3rem;
+
+    &__header{
+        background-color: var(--dark-blue);
+        padding: .5rem 1rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text{
+            font-size: 2rem;
+            text-align: center;
+            margin: 0;
+            color: white;
+        }
+
+        &__downPointer{
+            width: 3rem;
+            height: 3rem;
+            filter: brightness(100) invert(1);
+            transition: all .5s; 
+        }
+
+        @include pageButtonNotHover;
+        @include pageButtonHover;
+    }
+
+    &__description{
+        border-radius: 10px;
+        background-color: white;
+        padding: .5rem .5rem;
+        transform: scale(.95);
+
+        &__point{
+            font-size: 1.5rem;
+        }
+    }
+}

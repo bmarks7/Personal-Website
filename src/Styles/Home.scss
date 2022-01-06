@@ -1,0 +1,30 @@
+.Home{
+    &__intro{
+
+        display: flex;
+
+        &__img{
+            border-radius: 50%;
+            margin: 2rem;
+            border: 5px solid white;
+        }
+
+        &__description{
+            font-size: 1.5rem;
+            margin: 3rem;
+        }
+    }
+
+    &__links{
+        display: flex;
+        justify-content: center;
+        margin-top: 5vh;
+    }
+
+    &__skills{
+        margin: auto;
+        width: 50%;
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+    }
+}
