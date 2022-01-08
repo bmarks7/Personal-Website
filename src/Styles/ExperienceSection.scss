@@ -1,42 +1,89 @@
 @import './Variables.scss';
 
 .ExperienceSection{
-    margin-top: 3rem;
+    margin-bottom: 3rem;
 
     &__header{
-        background-color: var(--dark-blue);
-        padding: .5rem 1rem;
+        background-color: var(--base-color);
+        padding: 1rem 1rem;
         border-radius: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        &__text{
-            font-size: 2rem;
-            text-align: center;
-            margin: 0;
-            color: white;
-        }
+        border-radius: 15px 15px 0px 0px;
+        transition: all .5s;
+        cursor: pointer;
 
         &__downPointer{
             width: 3rem;
             height: 3rem;
-            filter: brightness(100) invert(1);
             transition: all .5s; 
         }
 
-        @include pageButtonNotHover;
-        @include pageButtonHover;
+        &__position{
+            &__org, &__title{
+                font-size: 1.5rem;
+            }
+
+            &__duration, &__loc__name{
+                font-size: 1rem;
+            }
+
+            &__title, &__duration, &__loc__name{
+                color: var(--text-color);
+            }
+
+            &__org{
+                font-weight: bold;
+                color: var(--text-color);
+                transition: all .5s;
+                border: 3px solid var(--text-color);
+                padding: 0rem .3rem;
+                border-radius: 10px;
+
+                &:hover{
+                    color: var(--light-purple);
+                    border-color: var(--light-purple);
+                }
+            }
+
+            &__loc{
+                display: flex;
+                align-items: center;
+
+                &__icon{
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin-right: .5rem;
+                }
+
+            }
+        }
     }
 
-    &__description{
-        border-radius: 10px;
-        background-color: white;
-        padding: .5rem .5rem;
-        transform: scale(.95);
+    &__content{
+        background-color: var(--base-color);
+        transform: scaleX(1.05);
+        border-radius: 0px 0px 15px 15px;
 
-        &__point{
-            font-size: 1.5rem;
+        &__description{
+            padding: 1rem 1rem;
+
+            &__paragraph{
+                font-size: 1rem;
+                margin: .5rem 0rem;
+                color: var(--text-color);
+            }
+        }
+
+        &__skills{
+            border-top: 3px solid var(--text-color);
+            padding: 1rem 1rem;
+
+            &__list{
+                display: flex;
+                flex-wrap: wrap;
+            }
         }
     }
 }

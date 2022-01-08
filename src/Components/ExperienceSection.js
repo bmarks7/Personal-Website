@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import downPointer from '../Images/downPointer.png';
+import locIcon from '../Images/locIcon.png';
+import Skill from './Skill';
+import Subheader from './Subheader';
 import '../Styles/ExperienceSection.scss';
 
 export default class ExperienceSection extends Component {
@@ -9,9 +12,14 @@ export default class ExperienceSection extends Component {
         this.state = {
             open: false,
             arrowUp: false,
+            scaleUp: false,
+            boxShadow: 'none',
+            headerColor: 'var(--base-color)',
         };
         this.openSection = this.openSection.bind(this);
-        this.points = this.props.description.split('<br>')
+        this.sectionHover = this.sectionHover.bind(this);
+        this.sectionStopHover = this.sectionStopHover.bind(this);
+        this.paragraphs = this.props.description.split('<br>')
     }
 
     openSection(e) {
@@ -21,18 +29,69 @@ export default class ExperienceSection extends Component {
         });
     }
 
+    sectionHover(e) {
+        if (this.state.open === false) {
+            this.setState({
+                scaleUp: true,
+                boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
+                headerColor: 'var(--hover-color)',
+            })
+        }
+    }
+
+    sectionStopHover(e) {
+        if (this.state.open === false) {
+            this.setState({
+                scaleUp: false,
+                boxShadow: 'none',
+                headerColor: 'var(--base-color)',
+            })
+        }
+    }
+
     render() {
         return (
             <div className="ExperienceSection">
-                <div className="ExperienceSection__header" onClick={this.openSection}>
-                    <p className="ExperienceSection__header__text">{this.props.organization}</p>
-                    <img className="ExperienceSection__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
+                <div className="ExperienceSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'scale(' + ((this.state.scaleUp) ? 1.05 : 1) + ')', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
+                    <div className="ExperienceSection__header__position">
+                        <a target='_blank' rel="noreferrer" href={this.props.orgLink}><span className="ExperienceSection__header__position__org">{this.props.org}</span></a>
+                        <span className="ExperienceSection__header__position__title"> - {this.props.title}</span>
+                        <br /><br />
+                        <span className="ExperienceSection__header__position__duration">{this.props.duration}</span>
+                        <br /><br />
+                        <div className="ExperienceSection__header__position__loc">
+                            <img src={locIcon} alt="location icon" className="ExperienceSection__header__position__loc__icon"/>
+                            <span className="ExperienceSection__header__position__loc__name">{this.props.location}</span>
+                        </div>
+                    </div>
+                    
+                    <img className="ExperienceSection__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downpointer" />
                 </div>
                 {this.state.open && 
-                    <div className="ExperienceSection__description">
-                        {this.points.map((point) => (
-                            <p className='ExperienceSection__description__point'>{point}</p>
-                        ))}
+                    <div className="ExperienceSection__content">
+
+                        {(this.props.description !== '') &&
+                            <div className="ExperienceSection__content__description">
+                                <Subheader text='Description'/>
+                                {this.paragraphs.map((paragraph) => (
+                                    <div key={paragraph} className='ExperienceSection__content__description__paragraph'>
+                                        <span>{paragraph}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        }
+
+                        {(this.props.skills.length > 0) &&
+                            <div className="ExperienceSection__content__skills">
+                                <Subheader text='Technologies Used'/>
+
+                                <div className="ExperienceSection__content__skills__list">
+                                    {this.props.skills.map((skill) => (
+                                        <Skill name={skill} key={skill}/>
+                                    ))}
+                                </div>
+                            </div>
+                        }
                     </div>
                 }
             </div>

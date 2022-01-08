@@ -6,7 +6,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className="Header">
-                <p className="Header__text">{this.props.text}</p>
+                <span className="Header__text">{this.props.text}</span>
             </div>
         )
     }

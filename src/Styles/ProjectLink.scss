@@ -1,0 +1,32 @@
+@import './Variables.scss';
+
+.ProjectLink{
+    &__link{
+        display: flex;
+        align-items: center;
+        margin: 0rem 1rem 1rem 0rem;
+        padding: .3rem .5rem .3rem .3rem;
+        border-radius: 10px; 
+        background-color: var(--hover-color);
+        box-shadow: none;
+        cursor: pointer;
+        transition: all .5s; 
+        
+        &__icon{
+            width: 3rem;
+            height: 3rem;
+            margin-right: .2rem;
+        }
+
+        &__name{
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
+            background-color: var(--light-purple);
+        }
+    }
+}

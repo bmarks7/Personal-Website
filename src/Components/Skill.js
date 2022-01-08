@@ -5,7 +5,7 @@ export default class Skill extends Component {
     render() {
         return (
             <div className='Skill'>
-                <p className='Skill__name'>{this.props.name}</p>
+                <span className='Skill__name'>{this.props.name}</span>
             </div>
         )
     }

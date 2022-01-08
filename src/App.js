@@ -24,7 +24,7 @@ function App() {
               <Experience/>
             </Route>
 
-            <Route exact path='/site/other'>
+            <Route exact path='/site/projects'>
               <Projects/>
             </Route>
 

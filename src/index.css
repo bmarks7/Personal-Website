@@ -11,8 +11,9 @@ code {
 }
 
 :root{
-  --dark-blue: #0047b3;
-  --light-blue: #4dacff;
-  --lighter-blue: #f0f8ff;
-  --hover-color: #0066ff;
+  --base-color: white;
+  --light-blue: #b3dbff;
+  --light-purple: #b3b3ff;
+  --hover-color: #cce6ff;
+  --text-color: #003399;
 }
