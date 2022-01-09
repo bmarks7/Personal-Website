@@ -4,6 +4,7 @@ import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import Resume from './Pages/Resume'
 import Navbar from './Components/Navbar';
+import {Helmet} from 'react-helmet';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.scss';
 
@@ -11,6 +12,12 @@ function App() {
   return (
     <Router>
       <div className='App'>
+      <Helmet>
+          <meta charSet="utf-8" />
+          <title>Brandon Marks</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+          <meta name="description" content="Brandon's personal website" />
+      </Helmet>
         <Navbar/>
 
         <div className="content">
