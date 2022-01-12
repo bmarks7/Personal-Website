@@ -61,7 +61,7 @@ export default class Navbar extends Component {
                 [lastOptionName]: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
                 [newOptionName]: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': hoverColor},
                 selectedOption: name,
-            }, () => { this.props.onChange(this.state)})
+            }, () => {})
         }
     }
 
