@@ -5,6 +5,9 @@ import Skill from './Skill';
 import ProjectLink from './ProjectLink';
 import '../Styles/ProjectsSection.scss';
 
+const baseColor = 'white';
+const lightBlue = '#cce6ff';
+
 export default class ProjectsSection extends Component {
 
     constructor(props) {
@@ -14,7 +17,7 @@ export default class ProjectsSection extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: 'var(--base-color)',
+            headerColor: baseColor,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
@@ -34,7 +37,7 @@ export default class ProjectsSection extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: 'var(--hover-color)',
+                headerColor: lightBlue,
             })
         }
     }
@@ -44,7 +47,7 @@ export default class ProjectsSection extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: 'var(--base-color)',
+                headerColor: baseColor,
             })
         }
     }
@@ -54,11 +57,11 @@ export default class ProjectsSection extends Component {
             <div className="ProjectsSection">
                 <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'scale(' + ((this.state.scaleUp) ? 1.05 : 1) + ')', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ProjectsSection__header__left">
-                        <img className="ProjectsSection__header__left__img" src={this.props.img} alt="project icon"/>
+                        {/* <img className="ProjectsSection__header__left__img" src={this.props.img} alt="project icon"/> */}
                         
                         <div className="ProjectsSection__header__left__desc">
-                            <p className="ProjectsSection__header__left__desc__name">{this.props.name}</p>
-                            <p className="ProjectsSection__header__left__desc__duration">{this.props.duration}</p>
+                            <span className="ProjectsSection__header__left__desc__name">{this.props.name}</span><br/><br />
+                            <span className="ProjectsSection__header__left__desc__duration">{this.props.duration}</span>
                         </div>
                     </div>
                     
@@ -96,7 +99,7 @@ export default class ProjectsSection extends Component {
 
                             <div className="ProjectsSection__content__links__list">
                                 {this.props.links.map((link) => (
-                                    <ProjectLink name={link.name} key={link.name} url={link.url} icon={link.icon}/>
+                                    <ProjectLink name={link.name} key={link.name} url={link.url}/>
                                 ))}
                             </div>
                         </div>

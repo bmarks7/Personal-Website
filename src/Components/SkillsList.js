@@ -3,6 +3,9 @@ import downPointer from '../Images/downPointer.png';
 import Skill from './Skill';
 import '../Styles/SkillsList.scss';
 
+const baseColor = 'white';
+const lightBlue = '#cce6ff';
+
 export default class SkillsList extends Component {
 
     constructor(props) {
@@ -12,7 +15,7 @@ export default class SkillsList extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: 'var(--base-color)',
+            headerColor: baseColor,
         };
 
         this.openList = this.openList.bind(this);
@@ -32,7 +35,7 @@ export default class SkillsList extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: 'var(--hover-color)',
+                headerColor: lightBlue,
             })
         }
     }
@@ -42,7 +45,7 @@ export default class SkillsList extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: 'var(--base-color)',
+                headerColor: baseColor,
             })
         }
     }

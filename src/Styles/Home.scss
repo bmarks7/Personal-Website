@@ -1,3 +1,5 @@
+@import './Variables.scss';
+
 .Home{
     &__intro{
 
@@ -6,12 +8,16 @@
         &__img{
             border-radius: 50%;
             margin: 2rem;
-            border: 5px solid white;
+            border: 5px solid $base-color;
         }
 
         &__description{
             font-size: 1.5rem;
             margin: 3rem;
+            color: $text-color;
+            background-color: $base-color;
+            padding: 1rem;
+            border-radius: 10px;
         }
     }
 

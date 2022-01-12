@@ -30,7 +30,7 @@ export default class Home extends Component {
                     Next summer, I will be joining J.D. Power as a software development intern where I will design, 
                     code, test, debug and analyze software applications for some of the world's largest automotive companies. 
                     <br /><br />
-                    I build this website using React.js and Sass.
+                    I built this website using React.js and Sass.
                     </p>
                 </div>
 

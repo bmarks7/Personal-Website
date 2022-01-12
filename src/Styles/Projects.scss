@@ -1,9 +1,5 @@
-.Projects{
-    &__projects{
-        margin: auto;
-        width: 50%;
-        margin-top: 15vh;
-        margin-bottom: 15vh;
-    }
+@import './Variables.scss';
 
+.Projects{
+    @include pageSettings;
 }

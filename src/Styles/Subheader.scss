@@ -1,9 +1,11 @@
+@import './Variables.scss';
+
 .Subheader{
     margin: .5rem 0rem 1rem 0rem;
 
     &__text{
         font-size: 1.5rem;
         text-align: center;
-        color: var(--text-color);
+        color: $text-color;
     }
 }

@@ -1,13 +1,9 @@
+@import './Variables.scss';
+
 .Experience{
-    &__experience{
-        margin: auto;
-        width: 50%;
-        margin-top: 15vh;
-        margin-bottom: 15vh;
+    @include pageSettings;
 
-        &__section{
-            margin-bottom: 10vh;
-        }
+    &__section{
+        margin-bottom: 10vh;
     }
-
 }

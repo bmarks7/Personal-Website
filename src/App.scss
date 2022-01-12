@@ -1,5 +1,73 @@
+@import './Styles/Variables.scss';
+
 .App{
-  background-image: linear-gradient(var(--light-blue), var(--light-purple));
+  background-image: linear-gradient($light-blue, $light-purple);
   height: 100%;
+  width: 100%;
+
+  &__footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
+
+    &__creator{
+      color: $text-color;
+      margin-right: 2rem;
+    }
+
+    &__sources{
+      color: $text-color;
+      text-decoration: underline;
+    }
+  }
+
+  // &__block{
+  //   width: 150px;
+  //   height: 150px;
+  //   background: rgba(255, 255, 255, 0.5);
+  //   position: absolute;
+  //   animation: animate 20s linear infinite;
+  //   overflow: hidden;
+  // }
+
 }
+
+#block1{
+  left: 5%;
+}
+
+#block2{
+  left: 15%;
+}
+
+#block3{
+  left: 30%;
+}
+
+#block4{
+  left: 50%;
+}
+
+#block5{
+  left: 60%;
+}
+
+#block6{
+  left: 80%;
+}
+
+@keyframes animate{
+  0%{
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    background-color: rgba(160, 112, 255, 1);
+  }
+
+  100%{
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+    background-color: rgba(0, 204, 255, 1);
+  }
+}
+
 

@@ -5,6 +5,9 @@ import Skill from './Skill';
 import Subheader from './Subheader';
 import '../Styles/ExperienceSection.scss';
 
+const baseColor = 'white';
+const lightBlue = '#cce6ff';
+
 export default class ExperienceSection extends Component {
 
     constructor(props) {
@@ -14,7 +17,7 @@ export default class ExperienceSection extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: 'var(--base-color)',
+            headerColor: baseColor,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
@@ -34,7 +37,7 @@ export default class ExperienceSection extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: 'var(--hover-color)',
+                headerColor: lightBlue,
             })
         }
     }
@@ -44,7 +47,7 @@ export default class ExperienceSection extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: 'var(--base-color)',
+                headerColor: baseColor,
             })
         }
     }

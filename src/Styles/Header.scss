@@ -1,8 +1,10 @@
+@import './Variables.scss';
+
 .Header{
     margin: 1rem 0rem;
     &__text{
         font-size: 2rem;
         text-align: center;
-        color: var(--text-color);
+        color: $text-color;
     }
 }

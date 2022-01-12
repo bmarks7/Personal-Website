@@ -2,7 +2,7 @@
 
 .Navbar{
 
-    background-color: var(--base-color);
+    background-color: $base-color;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -11,30 +11,26 @@
     &__header{
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
         padding: 2vh 0;
 
         &__name{
-            color: var(--text-color);
+            color: $text-color;
             display: inline;
             flex-basis: 30vw;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin: 0;
             font-weight: bold;
         }
 
         &__link{
-            color: var(--text-color);
+            color: $text-color;
             font-size: 1.5rem;
             margin: 0;
             transition: all .5s; 
             box-shadow: none;
-            background-color: transparent;
             padding: .3rem .5rem;
             border-radius: 10px;
-
-            @include pageButtonNotHover;
-            @include pageButtonHover;
         }
     }
     

@@ -1,3 +1,50 @@
-.Contact{
+@import './Variables.scss';
 
+.Contact{
+    @include pageSettings;
+    margin-bottom: 15rem;
+
+    &__form{
+        &__nameLabel, &__messageLabel, &__emailLabel, &__subjectLabel, &__nameInput, &__messageInput, &__emailInput, &__subjectInput{
+            display: block;
+        }
+
+        &__nameLabel, &__messageLabel, &__emailLabel, &__subjectLabel{
+            color: $text-color;
+            margin-top: 4vh;
+            margin-bottom: .5rem;
+            font-size: 1.5rem;
+        }
+
+        &__nameInput, &__messageInput, &__emailInput, &__subjectInput{
+            margin: auto;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        &__messageInput{
+            height: 15vh;
+        }
+        
+        &__btnContainer{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1rem;
+
+            &__sendBtn{
+                font-size: 1.5rem;
+                border: none;
+                border-radius: 10px;
+                color: $text-color;
+
+                @include pageButtonHover;
+                @include pageButtonNotHover;
+            }
+        }
+
+    }
 }

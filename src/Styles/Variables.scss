@@ -2,13 +2,29 @@
     &:hover{
         transform: scale(1.05);
         box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
-        background-color: var(--hover-color);
+        background-color: $light-blue;
     }
 }
 
 @mixin pageButtonNotHover {
-    background-color: var(--base-color);
+    background-color: $base-color;
     box-shadow: none;
     cursor: pointer;
     transition: all .5s;  
 }
+
+@mixin pageSettings {
+    margin: auto;
+    width: 50%;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    height: 100%;
+}
+
+$base-color: white;
+$light-purple: #b3b3ff;
+$light-blue: #cce6ff;
+$text-color: #003399;
+
+$downPointer-height: 2rem;
+$downPointer-width: 3.5rem;
