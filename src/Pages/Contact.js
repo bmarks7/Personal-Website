@@ -2,11 +2,34 @@ import React, { Component } from 'react'
 import '../Styles/Contact.scss'
 import Header from '../Components/Header'
 import emailjs from 'emailjs-com'
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
 export default class Contact extends Component {
     constructor(props){
         super(props)
         this.sendEmail = this.sendEmail.bind(this);
+        this.state = {
+            open: false,
+        }
+        this.handleClick = this.handleClick.bind(this)
+        this.handleClose = this.handleClose.bind(this)
+    }
+
+    handleClick() {
+        this.setState({
+            open: true,
+        })
+    }
+
+    handleClose(event, reason) {
+        if(reason === 'clickaway'){
+            return 
+        }
+        this.setState({
+            open: false,
+        })
     }
 
     sendEmail(e) {
@@ -25,7 +48,7 @@ export default class Contact extends Component {
     render() {
         return (
             <div className='Contact'>
-                <Header text='If you would like to connect with me, you can fill out the form below'/>
+                <Header text='If you would like to connect with me, you can fill out the form below and I&apos;ll get back to you by email'/>
                 <form className="Contact__form" onSubmit={this.sendEmail}>
                     <label className='Contact__form__nameLabel'>Name:</label>
                     <input className='Contact__form__nameInput' type="text" name='sender_name'/>
@@ -40,9 +63,27 @@ export default class Contact extends Component {
                     <input className='Contact__form__emailInput' type="text" placeholder="e.g. brandonmarks@gmail.com" name='sender_email'/>
                     
                     <div className="Contact__form__btnContainer">
-                        <input className='Contact__form__btnContainer__sendBtn' type="submit" value='Send'/>
+                        <input onClick={this.handleClick} className='Contact__form__btnContainer__sendBtn' type="submit" value='Send'/>
                     </div>
                 </form>
+
+                <Snackbar
+                    anchorOrigin={{
+                        vertical: 'bottom',
+                        horizontal: 'left'
+                    }}
+                    open={this.state.open}
+                    autoHideDuration={6000}
+                    onClose={this.handleClose}
+                    message='Message Sent'
+                    action={
+                        <React.Fragment>
+                            <IconButton onClick = {this.handleClose}>
+                                <CloseIcon />
+                            </IconButton>
+                        </React.Fragment>
+                    }
+                />
                 
             </div>
         )

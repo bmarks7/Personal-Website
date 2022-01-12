@@ -16,9 +16,9 @@ export default class ParticleBackground extends Component {
                         value: "#ffffff",
                     },
                     move: {
-                        direction: "bottom",
+                        direction: "top",
                         enable: true,
-                        speed: 6,
+                        speed: 5,
                     },
                     number: {
                         density: {
