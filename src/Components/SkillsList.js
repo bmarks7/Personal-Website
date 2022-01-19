@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import downPointer from '../Images/downPointer.png';
 import Skill from './Skill';
 import '../Styles/SkillsList.scss';
-
-const baseColor = 'white';
-const lightBlue = '#cce6ff';
+import cssVars from '../Styles/Variables.scss';
 
 export default class SkillsList extends Component {
 
@@ -15,7 +13,7 @@ export default class SkillsList extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: baseColor,
+            headerColor: cssVars.baseColor,
         };
 
         this.openList = this.openList.bind(this);
@@ -35,7 +33,7 @@ export default class SkillsList extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: lightBlue,
+                headerColor: cssVars.lightBlue,
             })
         }
     }
@@ -45,7 +43,7 @@ export default class SkillsList extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: baseColor,
+                headerColor: cssVars.baseColor,
             })
         }
     }

@@ -10,6 +10,7 @@ code {
     monospace;
 }
 
-:root{
-
+p{
+  margin: 0;
 }
+

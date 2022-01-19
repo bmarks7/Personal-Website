@@ -41,9 +41,7 @@
         }
 
         &__downPointer{
-            width: $downPointer-width;
-            height: $downPointer-height;
-            transition: all .5s; 
+            @include downPointerProps;
         }
 
     }

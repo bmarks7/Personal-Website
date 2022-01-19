@@ -16,26 +16,26 @@ export default class ParticleBackground extends Component {
                         value: "#ffffff",
                     },
                     move: {
-                        direction: "top",
+                        direction: "right",
                         enable: true,
                         speed: 5,
                     },
                     number: {
                         density: {
-                        enable: true,
-                        area: 800,
+                            enable: true,
+                            area: 800,
                         },
                         value: 70,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: .5,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
                         random: true,
-                        value: 6,
+                        value: 8,
                     },
                     },
                 }}

@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import '../Styles/Navbar.scss'
-
-const baseColor = 'white';
-const lightPurple = '#b3b3ff';
-const hoverColor = '#cce6ff';
+import cssVars from '../Styles/Variables.scss';
 
 export default class Navbar extends Component {
 
@@ -12,11 +9,11 @@ export default class Navbar extends Component {
         super(props)
         this.state = {
             selectedOption: 'home',
-            homeProps: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': hoverColor},
-            experienceProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
-            projectsProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
-            resumeProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
-            contactProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
+            homeProps: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue},
+            experienceProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor},
+            projectsProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor},
+            resumeProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor},
+            contactProps: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor},
         }
         this.optionHover = this.optionHover.bind(this);
         this.optionStopHover = this.optionStopHover.bind(this);
@@ -31,7 +28,7 @@ export default class Navbar extends Component {
             const optionName = name + 'Props';
 
             this.setState({
-                [optionName]: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': lightPurple}
+                [optionName]: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightPurple}
             }, () => { })
         }
     }
@@ -44,7 +41,7 @@ export default class Navbar extends Component {
             const optionName = name + 'Props';
 
             this.setState({
-                [optionName]: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor}
+                [optionName]: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor}
             }, () => { })
         }
     }
@@ -58,8 +55,8 @@ export default class Navbar extends Component {
             const newOptionName = name + 'Props';
 
             this.setState({
-                [lastOptionName]: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': baseColor},
-                [newOptionName]: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': hoverColor},
+                [lastOptionName]: {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor},
+                [newOptionName]: {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue},
                 selectedOption: name,
             }, () => {})
         }

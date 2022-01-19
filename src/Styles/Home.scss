@@ -9,15 +9,20 @@
             border-radius: 50%;
             margin: 2rem;
             border: 5px solid $base-color;
+            width: 30rem;
+            height: 30rem;
         }
 
         &__description{
-            font-size: 1.5rem;
             margin: 3rem;
-            color: $text-color;
-            background-color: $base-color;
-            padding: 1rem;
-            border-radius: 10px;
+
+            &__text{
+                font-size: 1.5rem;
+                color: $text-color;
+                background-color: $base-color;
+                padding: 1rem;
+                border-radius: 10px;
+            }
         }
     }
 

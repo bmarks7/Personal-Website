@@ -5,8 +5,8 @@ import Header from '../Components/Header'
 // import fooderLogo from '../Images/fooderLogo.png';
 // import ghostRunnerLogo from '../Images/ghostRunnerLogo.png';
 // import marksBlogLogo from '../Images/marksBlogLogo.png';
-// import devpostIcon from '../Images/devpostIcon.png';
-// import githubIcon from '../Images/githubIcon.png';
+import devpostIcon from '../Images/devpostIcon.png';
+import githubIcon from '../Images/githubIcon.png';
 
 
 import '../Styles/Projects.scss'
@@ -22,7 +22,7 @@ export default class Other extends Component {
                 duration = 'Aug 2020 - Sep 2020'
                 description = 'A mobile application that makes it easy for landlords to find potential tenants and for people to find places to stay'
                 technologies={['React Native', 'Node.js', 'MongoDB', 'Google Maps API']}
-                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/New_Live'}]}
+                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/New_Live', icon: githubIcon}]}
                 // img = {newLiveLogo}
                 />
 
@@ -31,7 +31,7 @@ export default class Other extends Component {
                 duration = 'Nov 2020'
                 description = 'Our application allows users to record their runs in the form of ghosts (playable recorded runs) which record the distance that a user travels at certain times and allows their runs to be replayed and challenged by other users to beat their times. This helps to create a feeling of community by working out with (or against) your friends, even if you can&apos;t physically be together. The app allows you to manage your own profile, friends list, track your best ghost runs, challenge other runners with similar average speeds, and track your location in real-time.'
                 technologies={['Google Cloud', 'Google Maps', 'JavaScript', 'MongoDB', 'React Native']}
-                links = {[{name: 'Devpost', url: 'https://devpost.com/software/fooder-e5hv9r'}]}
+                links = {[{name: 'Devpost', url: 'https://devpost.com/software/fooder-e5hv9r', icon: devpostIcon}]}
                 // img = {ghostRunnerLogo}
                 />
 
@@ -40,7 +40,7 @@ export default class Other extends Component {
                 duration = 'Feb 2020'
                 description = 'An application that tracks personal grocery habits and nutritional information through user grocery purchases, highlights potential deficiencies, and suggests foods to fill the gaps to improve dietary health'
                 technologies={['Bootstrap', 'CSS', 'Django', 'HTML', 'JavaScript', 'Python']}
-                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/Fooder'}, {name: 'Devpost', url: 'https://devpost.com/software/fooder-e5hv9r'}]}
+                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/Fooder', icon: githubIcon}, {name: 'Devpost', url: 'https://devpost.com/software/fooder-e5hv9r', icon: devpostIcon}]}
                 // img = {fooderLogo}
                 />
 
@@ -49,7 +49,7 @@ export default class Other extends Component {
                 duration = 'Dec 2019 - Jan 2020'
                 description = 'A full stack web application where users can create and manage their accounts, post blogs, and view the blogs of other users for any topic'
                 technologies={['Python', 'Django', 'HTML', 'Bootstrap', 'jQuery']}
-                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/Marks-Blog'}]}
+                links = {[{name: 'GitHub', url: 'https://github.com/bmarks7/Marks-Blog', icon: githubIcon}]}
                 // img = {marksBlogLogo}
                 />
             </div>

@@ -4,9 +4,7 @@ import Subheader from './Subheader';
 import Skill from './Skill';
 import ProjectLink from './ProjectLink';
 import '../Styles/ProjectsSection.scss';
-
-const baseColor = 'white';
-const lightBlue = '#cce6ff';
+import cssVars from '../Styles/Variables.scss';
 
 export default class ProjectsSection extends Component {
 
@@ -17,7 +15,7 @@ export default class ProjectsSection extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: baseColor,
+            headerColor: cssVars.baseColor,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
@@ -37,7 +35,7 @@ export default class ProjectsSection extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: lightBlue,
+                headerColor: cssVars.lightBlue,
             })
         }
     }
@@ -47,7 +45,7 @@ export default class ProjectsSection extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: baseColor,
+                headerColor: cssVars.baseColor,
             })
         }
     }
@@ -99,7 +97,9 @@ export default class ProjectsSection extends Component {
 
                             <div className="ProjectsSection__content__links__list">
                                 {this.props.links.map((link) => (
-                                    <ProjectLink name={link.name} key={link.name} url={link.url}/>
+                                    <div className="">
+                                        <ProjectLink name={link.name} key={link.name} url={link.url} icon={link.icon}/>
+                                    </div>
                                 ))}
                             </div>
                         </div>

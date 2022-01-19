@@ -5,22 +5,19 @@ import emailjs from 'emailjs-com'
 import Snackbar from '@material-ui/core/Snackbar'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
+import validator from 'validator'
 
 export default class Contact extends Component {
     constructor(props){
         super(props)
-        this.sendEmail = this.sendEmail.bind(this);
         this.state = {
             open: false,
+            emailError: '',
+            emailValid: false,
         }
-        this.handleClick = this.handleClick.bind(this)
         this.handleClose = this.handleClose.bind(this)
-    }
-
-    handleClick() {
-        this.setState({
-            open: true,
-        })
+        this.validateEmail = this.validateEmail.bind(this)
+        this.sendEmail = this.sendEmail.bind(this);
     }
 
     handleClose(event, reason) {
@@ -32,17 +29,40 @@ export default class Contact extends Component {
         })
     }
 
+    validateEmail(e) {
+        var email = e.target.value
+  
+        if (validator.isEmail(email)) {
+            this.setState({
+                emailError: 'Valid Email',
+                emailValid: true,
+            })
+        } else {
+            this.setState({
+                emailError: 'Please enter a valid Email!',
+                emailValid: false,
+            })
+        }
+    }
+
     sendEmail(e) {
         e.preventDefault();
-    
-        emailjs.sendForm('gmail', 'template_zqbbi62', e.target, 'user_gG8TRmKPQYTeIMpwCCK63')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
 
-          e.target.reset();
+        if(this.state.emailValid === true) {
+    
+            emailjs.sendForm('gmail', 'template_zqbbi62', e.target, 'user_gG8TRmKPQYTeIMpwCCK63')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            e.target.reset();
+
+            this.setState({
+                open: true,
+            })
+        }
       };
 
     render() {
@@ -51,19 +71,20 @@ export default class Contact extends Component {
                 <Header text='If you would like to connect with me, you can fill out the form below and I&apos;ll get back to you by email'/>
                 <form className="Contact__form" onSubmit={this.sendEmail}>
                     <label className='Contact__form__nameLabel'>Name:</label>
-                    <input className='Contact__form__nameInput' type="text" name='sender_name'/>
+                    <input required className='Contact__form__nameInput' type="text" name='sender_name'/>
 
                     <label className='Contact__form__subjectLabel'>Subject:</label>
-                    <input className='Contact__form__subjectInput' type="text" name='subject'/>
+                    <input required className='Contact__form__subjectInput' type="text" name='subject'/>
 
                     <label className='Contact__form__messageLabel'>Message:</label>
-                    <textarea className='Contact__form__messageInput' id="" cols="30" rows="10" name='message'></textarea>
+                    <textarea required className='Contact__form__messageInput' id="" cols="30" rows="10" name='message'></textarea>
                     
                     <label className='Contact__form__emailLabel'>Your Email Address:</label>
-                    <input className='Contact__form__emailInput' type="text" placeholder="e.g. brandonmarks@gmail.com" name='sender_email'/>
-                    
+                    <input onChange={this.validateEmail} required className='Contact__form__emailInput' type="text" placeholder="e.g. brandonmarks@gmail.com" name='sender_email'/>
+                    <p className="Contact__form__emailError">{this.state.emailError}</p>
+
                     <div className="Contact__form__btnContainer">
-                        <input onClick={this.handleClick} className='Contact__form__btnContainer__sendBtn' type="submit" value='Send'/>
+                        <input className='Contact__form__btnContainer__sendBtn' type="submit" value='Send'/>
                     </div>
                 </form>
 

@@ -4,9 +4,7 @@ import locIcon from '../Images/locIcon.png';
 import Skill from './Skill';
 import Subheader from './Subheader';
 import '../Styles/ExperienceSection.scss';
-
-const baseColor = 'white';
-const lightBlue = '#cce6ff';
+import cssVars from '../Styles/Variables.scss';
 
 export default class ExperienceSection extends Component {
 
@@ -17,12 +15,14 @@ export default class ExperienceSection extends Component {
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
-            headerColor: baseColor,
+            headerColor: cssVars.baseColor,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
         this.sectionStopHover = this.sectionStopHover.bind(this);
         this.paragraphs = this.props.description.split('<br>')
+
+        // console.log(variables);
     }
 
     openSection(e) {
@@ -37,7 +37,7 @@ export default class ExperienceSection extends Component {
             this.setState({
                 scaleUp: true,
                 boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-                headerColor: lightBlue,
+                headerColor: cssVars.lightBlue,
             })
         }
     }
@@ -47,7 +47,7 @@ export default class ExperienceSection extends Component {
             this.setState({
                 scaleUp: false,
                 boxShadow: 'none',
-                headerColor: baseColor,
+                headerColor: cssVars.baseColor,
             })
         }
     }

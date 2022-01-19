@@ -21,10 +21,34 @@
     height: 100%;
 }
 
-$base-color: white;
-$light-purple: #b3b3ff;
-$light-blue: #cce6ff;
-$text-color: #003399;
+@mixin downPointerProps{
+    width: $downPointer-width;
+    height: $downPointer-height;
+    transition: all .5s; 
+}
 
-$downPointer-height: 2rem;
-$downPointer-width: 3.5rem;
+$header-color: white;
+$base-color: white;
+$background-purple: #a903fc;
+$background-blue: #0091ff;
+$text-color: #003399;
+$text-color2: white;
+
+$light-purple: #dbbfff;
+$light-blue: #c2f1ff;
+
+$downPointer-height: 2.5rem;
+$downPointer-width: 2.5rem;
+
+:export{
+    headerColor: $header-color;
+    baseColor: $base-color;
+    backgroundPurple: $background-purple;
+    backgroundBlue: $background-blue;
+    textColor: $text-color;
+    textColor2: $text-color2;
+    lightPurple: $light-purple;
+    lightBlue: $light-blue;
+    downPointerHeight: $downPointer-height;
+    downPointerWidth: $downPointer-width;
+}

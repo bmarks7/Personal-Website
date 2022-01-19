@@ -1,0 +1,17 @@
+@import './Variables.scss';
+
+.Footer{
+    margin-bottom: 2vh;
+    display: flex;
+    justify-content: center;
+
+    &__creator{
+      color: $text-color2;
+      margin-right: 2rem;
+    }
+
+    &__sources{
+      color: $text-color2;
+      text-decoration: underline;
+    }
+  }

@@ -15,9 +15,7 @@
         cursor: pointer;
 
         &__downPointer{
-            width: $downPointer-width;
-            height: $downPointer-height;
-            transition: all .5s; 
+            @include downPointerProps;
         }
 
         &__position{
@@ -43,7 +41,7 @@
 
                 &:hover{
                     color: $light-purple;
-                    border-color: light-purple;
+                    border-color: $light-purple;
                 }
             }
 

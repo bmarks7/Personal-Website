@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import {Helmet} from 'react-helmet';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ParticleBackground from './Components/ParticleBackground';
+import Footer from './Components/Footer';
 import './App.scss';
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
             <link rel="canonical" href="http://mysite.com/example" />
             <meta name="description" content="Brandon's personal website" />
         </Helmet>
-        <ParticleBackground className='App__particleBackground'/>
+
+        <ParticleBackground />
+
         <Navbar className='App__navbar'/>
 
         <div className="App__content" id='content'>
@@ -40,10 +43,7 @@ function App() {
 
         </div>
 
-        <div className="App__footer">
-          <span className="App__footer__creator">Made by Brandon Marks in the Greater Toronto Area</span>
-          <a target='_blank' rel="noreferrer" href="https://docs.google.com/document/d/13vTMaYb8GCLGCE24XaVIGey2td3SIJCOsGZ3s3C3IsU/edit?usp=sharing" className="App__footer__sources">Sources</a>
-        </div>
+        <Footer className='App__footer'/>
 
       </div>
     </Router>

@@ -13,11 +13,11 @@
         transition: all .5s; 
         color: $text-color;
         
-        // &__icon{
-        //     width: 3rem;
-        //     height: 3rem;
-        //     margin-right: .2rem;
-        // }
+        &__icon{
+            width: 3rem;
+            height: 3rem;
+            margin-right: .2rem;
+        }
 
         &__name{
             color: text-color;
@@ -27,7 +27,7 @@
         &:hover{
             transform: scale(1.05);
             box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
-            background-color: $light-purple;
+            background-color: $light-blue;
         }
     }
 }
