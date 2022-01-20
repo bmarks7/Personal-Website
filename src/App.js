@@ -12,8 +12,11 @@ import './App.scss';
 
 function App() {
 
+  const pathname = window.location.pathname
+  console.log(pathname)
+
   return (
-    <Router basename='/site'>
+    <Router>
       <div className='App'>
         <Helmet>
             <meta charSet="utf-8" />
