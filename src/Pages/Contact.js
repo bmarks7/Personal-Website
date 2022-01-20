@@ -39,7 +39,7 @@ export default class Contact extends Component {
             })
         } else {
             this.setState({
-                emailError: 'Please enter a valid Email!',
+                emailError: 'Please enter a valid Email',
                 emailValid: false,
             })
         }
