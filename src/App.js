@@ -4,7 +4,6 @@ import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import Resume from './Pages/Resume'
 import Navbar from './Components/Navbar';
-import {Helmet} from 'react-helmet';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import ParticleBackground from './Components/ParticleBackground';
 import Footer from './Components/Footer';
@@ -15,12 +14,6 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        {/* <Helmet>
-            <meta charSet="utf-8" />
-            <title>Brandon Marks</title>
-            <link rel="canonical" href="http://mysite.com/example" />
-            <meta name="description" content="Brandon Marks' Website" />
-        </Helmet> */}
 
         <ParticleBackground />
 
