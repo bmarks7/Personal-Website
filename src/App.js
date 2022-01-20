@@ -13,13 +13,13 @@ import './App.scss';
 function App() {
 
   return (
-    <Router>
+    <Router basename='/site'>
       <div className='App'>
         <Helmet>
             <meta charSet="utf-8" />
             <title>Brandon Marks</title>
             <link rel="canonical" href="http://mysite.com/example" />
-            <meta name="description" content="Brandon's personal website" />
+            <meta name="description" content="Brandon Marks' Website" />
         </Helmet>
 
         <ParticleBackground />
