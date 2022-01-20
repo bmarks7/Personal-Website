@@ -12,18 +12,15 @@ import './App.scss';
 
 function App() {
 
-  const pathname = window.location.pathname
-  console.log(pathname)
-
   return (
     <Router>
       <div className='App'>
-        <Helmet>
+        {/* <Helmet>
             <meta charSet="utf-8" />
             <title>Brandon Marks</title>
             <link rel="canonical" href="http://mysite.com/example" />
             <meta name="description" content="Brandon Marks' Website" />
-        </Helmet>
+        </Helmet> */}
 
         <ParticleBackground />
 
