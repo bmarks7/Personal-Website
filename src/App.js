@@ -11,6 +11,23 @@ import './App.scss';
 
 function App() {
 
+  const data = localStorage.getItem('navbar-sel')
+  let route = '/site'
+
+  if(data){
+    const currentPage = JSON.parse(data).selectedOption
+  
+    if(currentPage === 'contact'){
+      route = '/site/contact'
+    } else if(currentPage === 'experience'){
+      route = '/site/experience'
+    } else if(currentPage === 'projects'){
+      route = '/site/projects'
+    } else if(currentPage === 'resume'){
+      route = '/site/resume'
+    }
+  }
+
   return (
       <div className='App'>
 
@@ -19,9 +36,11 @@ function App() {
         <Navbar className='App__navbar'/>
 
         <div className="App__content" id='content'>
+          <Redirect to={route}/>
+
           <Switch>
 
-            <Route exact path='/site' component = {Home}/>
+            <Route exact path='/site' component={Home}/>
 
             <Route exact path='/site/experience' component={Experience}/>
 
@@ -30,10 +49,6 @@ function App() {
             <Route exact path='/site/resume' component={Resume}/>
 
             <Route exact path='/site/contact' component={Contact}/>
-
-            <Route path='*'>
-              <Redirect to='/site'/>
-            </Route>
 
           </Switch>
 
