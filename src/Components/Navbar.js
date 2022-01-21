@@ -113,6 +113,7 @@ export default class Navbar extends Component {
 
         if(name.includes('Mobile')){
             name = name.replace('Mobile', '')
+            this.setState({open: false})
         }
 
         // If the user has not selected this option
@@ -131,8 +132,6 @@ export default class Navbar extends Component {
                 selectedOption: name,
             }, () => {})
         }
-
-        document.getElementById('menuMask').click()
 
     }
 
@@ -156,7 +155,7 @@ export default class Navbar extends Component {
                     />
 
                 {this.state.open && 
-                    <div id='menuMask' className="Navbar__mobile__menuMask" onClick={() => this.setState({open: false})}></div>
+                    <div id='menuMask' ref={(input) => (this.inputElement = input)} className="Navbar__mobile__menuMask" onClick={() => this.setState({open: false})}></div>
                 }
                 {this.state.open && 
                     <div className='Navbar__mobile__menu'>

@@ -4,7 +4,7 @@ import Experience from './Pages/Experience';
 import Projects from './Pages/Projects';
 import Resume from './Pages/Resume'
 import Navbar from './Components/Navbar';
-import {Route, Switch, Redirect} from 'react-router-dom';
+import {Route, Switch, Redirect}  from 'react-router-dom';
 import ParticleBackground from './Components/ParticleBackground';
 import Footer from './Components/Footer';
 import './App.scss';
@@ -12,7 +12,6 @@ import './App.scss';
 function App() {
 
   return (
-    // <Router>
       <div className='App'>
 
         <ParticleBackground />
@@ -43,7 +42,6 @@ function App() {
         <Footer className='App__footer'/>
 
       </div>
-    // </Router>
   );
 }
 
