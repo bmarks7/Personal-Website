@@ -28,7 +28,7 @@
         }
 
         @media only screen and (max-width: 700px) {
-            margin-left: 1vw;
+            margin-left: 3vw;
             flex-basis: 70vw;
         }
 
@@ -81,7 +81,7 @@
                 transition: all .5s; 
                 box-shadow: none;
                 padding: .3rem .5rem;
-                margin: 1rem 0rem;
+                margin: 1rem 0rem 1rem 1rem;
             }
         }
     
@@ -97,7 +97,7 @@
 
         &__icon{
             font-size: 2rem;
-            margin-right: .5rem;
+            margin-right: 1rem;
         }
 
     }
