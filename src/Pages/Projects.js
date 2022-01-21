@@ -18,6 +18,15 @@ export default class Other extends Component {
                 <Header text='Here are a few of the projects I worked on in hackathons and on my own'/>
 
                 <ProjectsSection 
+                name = 'UmmLess.tech - DeltaHacks 8 at McMaster University(Hackathon)'
+                duration = 'Jan 2022'
+                description = 'A web application that helps people improve their public speaking skills by analyzing audio and using AssemblyAI API'
+                technologies={['React.js', 'Flask', 'SQLAlchemy']}
+                links = {[{name: 'DevPost', url: 'https://devpost.com/software/ummless-tech?ref_content=user-portfolio&ref_feature=in_progress', icon: devpostIcon}, {name: 'GitHub', url: 'https://github.com/bmarks7/ummless.tech', icon: githubIcon}]}
+                // img = {newLiveLogo}
+                />
+
+                <ProjectsSection 
                 name = 'New Live'
                 duration = 'Aug 2020 - Sep 2020'
                 description = 'A mobile application that makes it easy for landlords to find potential tenants and for people to find places to stay'
