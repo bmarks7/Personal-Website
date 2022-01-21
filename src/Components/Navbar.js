@@ -39,7 +39,6 @@ export default class Navbar extends Component {
         this.optionHover = this.optionHover.bind(this);
         this.optionStopHover = this.optionStopHover.bind(this);
         this.optionClick = this.optionClick.bind(this);
-
     }
 
     componentDidMount() {
@@ -133,6 +132,8 @@ export default class Navbar extends Component {
             }, () => {})
         }
 
+        document.getElementById('menuMask').click()
+
     }
 
     render() {
@@ -155,7 +156,7 @@ export default class Navbar extends Component {
                     />
 
                 {this.state.open && 
-                    <div className="Navbar__mobile__menuMask" onClick={() => this.setState({open: false})}></div>
+                    <div id='menuMask' className="Navbar__mobile__menuMask" onClick={() => this.setState({open: false})}></div>
                 }
                 {this.state.open && 
                     <div className='Navbar__mobile__menu'>

@@ -29,6 +29,9 @@ export default class ExperienceSection extends Component {
         this.setState({
             open: !this.state.open,
             arrowUp: !this.state.arrowUp,
+            scaleUp: true,
+            boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
+            headerColor: cssVars.lightBlue,
         });
     }
 
