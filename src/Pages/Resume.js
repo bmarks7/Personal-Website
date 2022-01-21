@@ -30,9 +30,9 @@ export default class Resume extends Component {
                     <iframe className='Resume__Container__iframe' title='resume' src="https://drive.google.com/file/d/1sBsKwA2b6fbKXsC-8A8v7_dZRsLCEEQd/preview" allow="autoplay"></iframe>
                 </div>
 
-                <div className="Resume__link">
+                {/* <div className="Resume__link">
                     <SocialLink url = 'https://drive.google.com/file/d/1sBsKwA2b6fbKXsC-8A8v7_dZRsLCEEQd/view?usp=sharing' name='Resume' icon={ResumeIcon}/>
-                </div>
+                </div> */}
 
             </div>
         )
