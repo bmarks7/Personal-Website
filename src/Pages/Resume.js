@@ -24,7 +24,7 @@ export default class Resume extends Component {
             <div className='Resume'>
                 <Header text='My Resume'/>
                 <div className="Resume__Container">
-                    <iframe title='resume' src="https://drive.google.com/file/d/1sBsKwA2b6fbKXsC-8A8v7_dZRsLCEEQd/preview" width="100%" height="1000" allow="autoplay"></iframe>
+                    <iframe title='resume' src="https://drive.google.com/file/d/1sBsKwA2b6fbKXsC-8A8v7_dZRsLCEEQd/preview" width="100%" height="900" allow="autoplay"></iframe>
                 </div>
             </div>
         )

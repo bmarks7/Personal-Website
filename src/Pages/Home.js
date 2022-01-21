@@ -18,7 +18,7 @@ export default class Home extends Component {
                 <div className='Home__intro'>
                     <img className='Home__intro__img' src={facePic} alt="professional pic"/>
                     <div className="Home__intro__description">
-                        <Header text = 'About Me'/>
+                        <Header text = 'About Me' className='Home__intro__description__header'/>
                         <p className="Home__intro__description__text">Hi, I'm Brandon! I'm a third-year computer science student 
                         at Western University in London, Ontario and am based in the Greater Toronto Area.
                         <br/><br/> 

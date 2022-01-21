@@ -97,8 +97,8 @@ export default class ProjectsSection extends Component {
 
                             <div className="ProjectsSection__content__links__list">
                                 {this.props.links.map((link) => (
-                                    <div className="">
-                                        <ProjectLink name={link.name} key={link.name} url={link.url} icon={link.icon}/>
+                                    <div className="" key={link.name}>
+                                        <ProjectLink name={link.name} url={link.url} icon={link.icon}/>
                                     </div>
                                 ))}
                             </div>

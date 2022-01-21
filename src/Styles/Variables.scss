@@ -19,12 +19,24 @@
     margin-top: 5vh;
     margin-bottom: 15vh;
     height: 100%;
+
+    @media only screen and (max-width: 1000px) {
+        width: 80%;
+    }
+
+    @media only screen and (max-width: 800px) {
+        // text-align: center;
+    }
 }
 
 @mixin downPointerProps{
     width: $downPointer-width;
     height: $downPointer-height;
     transition: all .5s; 
+    @media only screen and (max-width: 700px) {
+        width: 2rem;
+        height: 2rem;
+    }
 }
 
 $header-color: white;

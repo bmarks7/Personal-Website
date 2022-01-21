@@ -1,37 +1,109 @@
 @import './Variables.scss';
 
 .Navbar{
-
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2vh 0;
     background-color: $base-color;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     z-index: 3;
 
-    &__header{
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        padding: 2vh 0;
+    @media only screen and (max-width: 700px) {
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        &__name{
-            color: $text-color;
-            display: inline;
-            flex-basis: 30vw;
-            font-size: 2.5rem;
-            margin: 0;
-            font-weight: bold;
+    @media only screen and (max-width: 1000px) {
+        padding: 1vh;
+    }
+
+    &__name{
+        color: $text-color;
+        display: inline;
+        flex-basis: 30vw;
+        font-size: 2.5rem;
+        font-weight: bold;
+
+        @media only screen and (max-width: 1000px) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: 700px) {
+            margin-left: 1vw;
+            flex-basis: 70vw;
+        }
+
+        @media only screen and (max-width: 400px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__linkDiv{
+
+        @media only screen and (max-width: 700px) {
+            display: none;
         }
 
         &__link{
             color: $text-color;
             font-size: 1.5rem;
-            margin: 0;
             transition: all .5s; 
             box-shadow: none;
             padding: .3rem .5rem;
             border-radius: 10px;
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 1rem;
+                padding: .15rem .3rem;
+                border-radius: 5px;
+            }
         }
+    }
+
+    &__mobile{
+        display: none;
+
+        @media only screen and (max-width: 700px) {
+            display: inline;
+        }
+
+        &__menu{
+            height: 100%;
+            background-color: $base-color;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 80%;
+            z-index: 50;
+    
+            &__link{
+                color: $text-color;
+                font-size: 1.5rem;
+                transition: all .5s; 
+                box-shadow: none;
+                padding: .3rem .5rem;
+                margin: 1rem 0rem;
+            }
+        }
+    
+        &__menuMask{
+            background-color: rgba(255, 255, 255, .9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 49;
+        }
+
+        &__icon{
+            font-size: 2rem;
+            margin-right: .5rem;
+        }
+
     }
     
 }

@@ -58,7 +58,7 @@ export default class SkillsList extends Component {
                 {this.state.open && 
                      <div className="SkillsList__list">
                      {this.props.skills.map((skill) => (
-                         <Skill name={skill}/>
+                         <Skill name={skill} key={skill}/>
                      ))}
                     </div>
                 }
