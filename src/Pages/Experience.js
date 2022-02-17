@@ -16,11 +16,11 @@ export default class Experience extends Component {
                     orgLink='https://honestempathy.ca'
                     title = 'Software Developer'
                     duration = 'Feb 2022 - Present'
-                    location='Vancouver, ON Canada and Toronto, ON Canada(Remote)'
+                    location='Toronto, ON Canada and Vancouver, ON Canada (Remote)'
                     description='Coming soon'
                     skills = {[]}
                     />
-                    
+
                     <ExperienceSection 
                     org='OGSR Library' 
                     orgLink = 'http://www.ogsrlibrary.com'
