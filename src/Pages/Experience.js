@@ -10,6 +10,17 @@ export default class Experience extends Component {
 
                 <div className="Experience__section">
                     <Header text='Here is my relevant work experience:'/>
+
+                    <ExperienceSection 
+                    org = 'Honest Empathy'
+                    orgLink='https://honestempathy.ca'
+                    title = 'Software Developer'
+                    duration = 'Feb 2022 - Present'
+                    location='Vancouver, ON Canada and Toronto, ON Canada(Remote)'
+                    description='Coming soon'
+                    skills = {[]}
+                    />
+                    
                     <ExperienceSection 
                     org='OGSR Library' 
                     orgLink = 'http://www.ogsrlibrary.com'
@@ -38,7 +49,7 @@ export default class Experience extends Component {
                     org = 'eHacks Events'
                     orgLink='https://ehacks.ca'
                     title = 'Full Stack Developer'
-                    duration = 'Jul 2021 - Present'
+                    duration = 'Jul 2021 - Jan 2022'
                     location='London, ON Canada (Remote)'
                     description='‐ Implementing responsive design and maintainable code using React.js, Sass, Node.js and MongoDB,
                     creating a user-friendly website for 200 hackathon participants <br>
