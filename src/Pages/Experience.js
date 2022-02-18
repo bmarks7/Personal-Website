@@ -16,7 +16,7 @@ export default class Experience extends Component {
                     orgLink='https://honestempathy.ca'
                     title = 'Software Developer'
                     duration = 'Feb 2022 - Present'
-                    location='Toronto, ON Canada and Vancouver, ON Canada (Remote)'
+                    location='Toronto, ON Canada and Vancouver, BC Canada (Remote)'
                     description='Coming soon'
                     skills = {[]}
                     />
