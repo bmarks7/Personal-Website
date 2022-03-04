@@ -49,7 +49,7 @@ export default class Home extends Component {
                     <SkillsSection title = "Front End Technologies" skills = {['HTML', 'CSS', 'React.js', 'React Native', 'Angular', 'Bootstrap']}/>
                     <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django']}/>
                     <SkillsSection title = "Databases" skills = {['SQL', 'MongoDB', 'MySQL']}/>
-                    <SkillsSection title = "AI and Machine Learning" skills = {['TensorFlow', 'Panas', 'NumPy']}/>
+                    <SkillsSection title = "AI and Machine Learning" skills = {['TensorFlow', 'Pandas', 'NumPy']}/>
                     <SkillsSection title = "Other" skills = {['Git/GitHub', 'AWS', 'JIRA']}/>
 
                 </div>
