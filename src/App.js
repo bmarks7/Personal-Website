@@ -12,19 +12,19 @@ import './App.scss';
 function App() {
 
   const data = localStorage.getItem('navbar-sel')
-  let route = '/site'
+  let route = '/'
 
   if(data){
     const currentPage = JSON.parse(data).selectedOption
   
     if(currentPage === 'contact'){
-      route = '/site/contact'
+      route = '/contact'
     } else if(currentPage === 'experience'){
-      route = '/site/experience'
+      route = '/experience'
     } else if(currentPage === 'projects'){
-      route = '/site/projects'
+      route = '/projects'
     } else if(currentPage === 'resume'){
-      route = '/site/resume'
+      route = '/resume'
     }
   }
 
@@ -40,15 +40,15 @@ function App() {
 
           <Switch>
 
-            <Route exact path='/site' component={Home}/>
+            <Route exact path='/' component={Home}/>
 
-            <Route exact path='/site/experience' component={Experience}/>
+            <Route exact path='/experience' component={Experience}/>
 
-            <Route exact path='/site/projects' component={Projects}/>
+            <Route exact path='/projects' component={Projects}/>
 
-            <Route exact path='/site/resume' component={Resume}/>
+            <Route exact path='/resume' component={Resume}/>
 
-            <Route exact path='/site/contact' component={Contact}/>
+            <Route exact path='/contact' component={Contact}/>
 
           </Switch>
 
