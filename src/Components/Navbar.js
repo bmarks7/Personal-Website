@@ -140,11 +140,11 @@ export default class Navbar extends Component {
             <div className='Navbar'>
                 <p className='Navbar__name'>Brandon Marks</p>
 
-                <div className="Navbar__linkDiv"><Link to='/site'><p id='home' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.homeProps} className="Navbar__linkDiv__link">Home</p></Link></div>
-                <div className="Navbar__linkDiv"><Link to='/site/experience'><p id='experience' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.experienceProps} className="Navbar__linkDiv__link">Experience</p></Link></div>
-                <div className="Navbar__linkDiv"><Link to='/site/projects'><p id='projects' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.projectsProps} className="Navbar__linkDiv__link">Projects</p></Link></div>
-                <div className="Navbar__linkDiv"><Link to='/site/resume'><p id='resume' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.resumeProps} className="Navbar__linkDiv__link">Resume</p></Link></div>
-                <div className="Navbar__linkDiv"><Link to='/site/contact'><p id='contact' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.contactProps} className="Navbar__linkDiv__link">Contact</p></Link></div>
+                <div className="Navbar__linkDiv"><Link to='/'><p id='home' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.homeProps} className="Navbar__linkDiv__link">Home</p></Link></div>
+                <div className="Navbar__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.experienceProps} className="Navbar__linkDiv__link">Experience</p></Link></div>
+                <div className="Navbar__linkDiv"><Link to='/projects'><p id='projects' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.projectsProps} className="Navbar__linkDiv__link">Projects</p></Link></div>
+                <div className="Navbar__linkDiv"><Link to='/resume'><p id='resume' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.resumeProps} className="Navbar__linkDiv__link">Resume</p></Link></div>
+                <div className="Navbar__linkDiv"><Link to='/contact'><p id='contact' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.contactProps} className="Navbar__linkDiv__link">Contact</p></Link></div>
 
                 <nav className='Navbar__mobile'>
                     <FontAwesomeIcon className='Navbar__mobile__icon'
@@ -159,11 +159,11 @@ export default class Navbar extends Component {
                 }
                 {this.state.open && 
                     <div className='Navbar__mobile__menu'>
-                        <Link to='/site'><p id='homeMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.homePropsMobile} className="Navbar__mobile__menu__link">Home</p></Link>
-                        <Link to='/site/experience'><p id='experienceMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.experiencePropsMobile} className="Navbar__mobile__menu__link">Experience</p></Link>
-                        <Link to='/site/projects'><p id='projectsMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.projectsPropsMobile} className="Navbar__mobile__menu__link">Projects</p></Link>
-                        <Link to='/site/resume'><p id='resumeMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.resumePropsMobile} className="Navbar__mobile__menu__link">Resume</p></Link>
-                        <Link to='/site/contact'><p id='contactMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.contactPropsMobile} className="Navbar__mobile__menu__link">Contact</p></Link>
+                        <Link to='/'><p id='homeMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.homePropsMobile} className="Navbar__mobile__menu__link">Home</p></Link>
+                        <Link to='/experience'><p id='experienceMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.experiencePropsMobile} className="Navbar__mobile__menu__link">Experience</p></Link>
+                        <Link to='/projects'><p id='projectsMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.projectsPropsMobile} className="Navbar__mobile__menu__link">Projects</p></Link>
+                        <Link to='/resume'><p id='resumeMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.resumePropsMobile} className="Navbar__mobile__menu__link">Resume</p></Link>
+                        <Link to='/contact'><p id='contactMobile' onMouseEnter = {this.optionHover} onMouseLeave = {this.optionStopHover} onClick={this.optionClick} style={this.state.contactPropsMobile} className="Navbar__mobile__menu__link">Contact</p></Link>
                     </div>
                 
                 }
