@@ -1,7 +1,7 @@
 @import './Variables.scss';
 
 .SkillsList{
-    margin-top: 3rem;
+    margin-bottom: 3rem;
 
     @media only screen and (max-width: 750px) {
         margin-top: 1.5rem;
@@ -14,8 +14,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 15px 15px 0px 0px;
-        transition: all .5s;
+        transition: transform .5s, box-shadow .5s, background-color .5s;
         cursor: pointer;
 
         @media only screen and (max-width: 500px) {
@@ -40,12 +39,11 @@
     }
 
     &__list{
+        transform: translateY(-11px);
         display: flex;
         flex-wrap: wrap;
-        border-radius: 10px;
         background-color: $base-color;
         padding: 1rem 1rem;
-        transform: scaleX(1.05);
-        border-radius: 0px 0px 15px 15px;
+        border-radius: 0px 0px 10px 10px;
     }
 }

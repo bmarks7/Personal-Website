@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import downPointer from '../Images/downPointer.png';
+import calendarIcon from '../Images/calendar.png';
 import Subheader from './Subheader';
 import Skill from './Skill';
 import ProjectLink from './ProjectLink';
@@ -56,13 +57,17 @@ export default class ProjectsSection extends Component {
     render() {
         return (
             <div className="ProjectsSection">
-                <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'scale(' + ((this.state.scaleUp) ? 1.05 : 1) + ')', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
+                <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? -10 : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ProjectsSection__header__left">
-                        {/* <img className="ProjectsSection__header__left__img" src={this.props.img} alt="project icon"/> */}
                         
                         <div className="ProjectsSection__header__left__desc">
-                            <span className="ProjectsSection__header__left__desc__name">{this.props.name}</span><br/><br />
-                            <span className="ProjectsSection__header__left__desc__duration">{this.props.duration}</span>
+                            <span className="ProjectsSection__header__left__desc__name">{this.props.name}</span>
+                            <span className="ProjectsSection__header__left__desc__event"> {(this.props.event !== '') ? `- ${this.props.event}` : ''}</span>
+                            <br/><br /> 
+                            <div className="ProjectsSection__header__left__desc__duration">
+                                <img src={calendarIcon} alt="duration icon" className="ProjectsSection__header__left__desc__duration__icon"/>
+                                <span className="ProjectsSection__header__left__desc__duration__text">{this.props.duration}</span>
+                            </div>
                         </div>
                     </div>
                     

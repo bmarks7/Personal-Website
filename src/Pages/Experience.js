@@ -16,19 +16,35 @@ export default class Experience extends Component {
                     orgLink='https://honestempathy.ca'
                     title = 'Software Developer'
                     duration = 'Feb 2022 - Present'
-                    location='Toronto, ON Canada and Vancouver, BC Canada (Remote)'
-                    description='Coming soon'
-                    skills = {[]}
+                    location='Vancouver, BC Canada (Remote)'
+                    description='
+                    ‐ Enhanced journaling and support group features on website using React, Express.js and PostgreSQL, improving many users’ experiences <br>
+                    ‐ Coordinated Jira tickets with developers through sprint plannings and stand-ups, and discussed website details with a designer, ensuring efficient completion of tickets'
+                    skills = {['React', 'Express', 'PostgreSQL']}
+                    />
+
+                    <ExperienceSection 
+                    org = 'eHacks Events'
+                    orgLink='https://ehacks.ca'
+                    title = 'Full Stack Developer'
+                    duration = 'Jul 2021 - Jan 2022'
+                    location='London, ON Canada (Remote)'
+                    description='
+                    ‐ Implementing responsive design and maintainable code using React, Sass, Node.js and MongoDB,
+                    creating a user-friendly website for 200 hackathon participants <br>
+                    ‐ Collaborating with 2 other developers by performing code reviews and managing version control of
+                    source code on Git using industry best practices, increasing development progress'
+                    skills = {['React', 'Sass', 'Node.js', 'MongoDB', 'Git']}
                     />
 
                     <ExperienceSection 
                     org='OGSR Library' 
                     orgLink = 'http://www.ogsrlibrary.com'
-                    title ='Information Systems Assistant' 
-                    duration='May 2021 - August 2021'
+                    title ='Software Developer' 
+                    duration='May 2021 - Aug 2021'
                     location='London, ON Canada (Remote)'
-                    description = '‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> ‐ Managed version control of source code using Git/GitHub, improving efficiency of programming tasks<br>'
-                    skills = {['HTML', 'CSS', 'JavaScript', 'Git/GitHub']}
+                    description = '‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> ‐ Managed version control of source code using Git, improving efficiency of programming tasks<br>'
+                    skills = {['HTML', 'CSS', 'JavaScript', 'Git']}
                     />
                 </div>
 
@@ -39,23 +55,10 @@ export default class Experience extends Component {
                     org = 'Western Computer Science Undergraduate Society'
                     orgLink='https://csus.csd.uwo.ca/#/'
                     title = 'Web Developer'
-                    duration = 'Dec 2021 - Present'
+                    duration = 'Mar 2022 - Apr 2022'
                     location='London, ON Canada (Remote)'
                     description='Developing a new website for the Computer Science Undergraduate Society at Western University'
-                    skills = {['React.js', 'Git/GitHub']}
-                    />
-
-                    <ExperienceSection 
-                    org = 'eHacks Events'
-                    orgLink='https://ehacks.ca'
-                    title = 'Full Stack Developer'
-                    duration = 'Jul 2021 - Jan 2022'
-                    location='London, ON Canada (Remote)'
-                    description='‐ Implementing responsive design and maintainable code using React.js, Sass, Node.js and MongoDB,
-                    creating a user-friendly website for 200 hackathon participants <br>
-                    ‐ Collaborating with 2 other developers by performing code reviews and managing version control of
-                    source code on Git/GitHub using industry best practices, increasing development progress'
-                    skills = {['React.js', 'Sass', 'Node.js', 'MongoDB', 'Git/GitHub']}
+                    skills = {['React', 'Git']}
                     />
 
                     <ExperienceSection 
@@ -94,8 +97,8 @@ export default class Experience extends Component {
                     title = 'Member'
                     duration = 'Oct 2019 - Mar 2020'
                     location='London, ON Canada (Remote)'
-                    description='Attended workshops to learn machine learning fundamentals'
-                    skills={[]}
+                    description='Developed experience with machine learning concepts'
+                    skills={['Pandas', 'NumPy', 'TensorFlow']}
                     />
                 </div>
 

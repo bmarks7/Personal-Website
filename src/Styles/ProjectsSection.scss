@@ -10,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        transition: all .5s;
+        transition: transform .5s, box-shadow .5s, background-color .5s;
         cursor: pointer;
 
         @media only screen and (max-width: 500px) {
@@ -30,11 +30,36 @@
                 }
 
                 &__duration{
-                    font-size: 1rem;
+
+                    display: flex;
+                    align-items: center;
+
+                    &__icon{
+                        width: 1rem;
+                        height: 1rem;
+                        margin-right: .5rem;
+    
+                        @media only screen and (max-width: 750px) {
+                            width: .7rem;
+                            height: .7rem;
+                        }
+                    }
+                }
+
+                &__name, &__event{
+                    font-size: 1.5rem;
+    
+                    @media only screen and (max-width: 750px) {
+                        font-size: 1.2rem;
+                    }
                 }
 
                 &__name, &__duration{
                     color: $text-color;
+                }
+
+                &__name{
+                    font-weight: bold;
                 }
             }
         }
@@ -47,19 +72,19 @@
 
     &__content{
         background-color: $base-color;
-        transform: scaleX(1.05);
         border-radius: 0px 0px 15px 15px;
+        transform: translateY(-11px);
 
         &__description{
-            padding: 1rem 1rem;
+            padding: 1rem 1rem 0rem 1rem;
 
             @media only screen and (max-width: 500px) {
-                padding: .5rem .5rem;
+                padding: .5rem .5rem 0rem .5rem
             }
 
             &__paragraph{
                 font-size: 1rem;
-                margin: .5rem 0rem;
+                margin-bottom: .5rem;
                 color: $text-color;
 
                 @media only screen and (max-width: 700px) {
@@ -69,11 +94,10 @@
         }
 
         &__skills{
-            border-top: 1px solid $text-color;
-            padding: 1rem 1rem;
+            padding: 1rem 1rem 0rem 1rem;
 
             @media only screen and (max-width: 500px) {
-                padding: .5rem .5rem;
+                padding: .5rem .5rem 0rem .5rem
             }
 
             &__list{
@@ -83,11 +107,10 @@
         }
 
         &__links{
-            border-top: 1px solid $text-color;
-            padding: 1rem 1rem;
+            padding: 1rem;
 
             @media only screen and (max-width: 500px) {
-                padding: .5rem .5rem;
+                padding: .5rem
             }
 
             &__list{

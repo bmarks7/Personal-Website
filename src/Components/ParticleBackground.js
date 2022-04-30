@@ -10,7 +10,7 @@ export default class ParticleBackground extends Component {
             <Particles
                 id="tsparticles"
                 options={{
-                    fpsLimit: 60,
+                    fpsLimit: 70,
                     particles: {
                     color: {
                         value: "#ffffff",
@@ -25,17 +25,17 @@ export default class ParticleBackground extends Component {
                             enable: true,
                             area: 800,
                         },
-                        value: 70,
+                        value: 50,
                     },
                     opacity: {
-                        value: .5,
+                        value: .4,
                     },
                     shape: {
                         type: "circle",
                     },
                     size: {
                         random: true,
-                        value: 8,
+                        value: 15,
                     },
                     },
                 }}

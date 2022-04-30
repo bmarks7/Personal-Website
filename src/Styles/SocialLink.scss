@@ -1,6 +1,7 @@
 @import './Variables.scss';
 
 .SocialLink{
+    width: 270px;
     &__link{
         display: flex;
         align-items: center;
@@ -15,7 +16,6 @@
         &__icon{
             width: 3rem;
             height: 3rem;
-            margin-right: .2rem;
 
             @media only screen and (max-width: 700px) {
                 width: 2rem;
@@ -26,6 +26,7 @@
         &__name{
             color: $text-color;
             font-size: 1.7rem;
+            margin: auto;
             @media only screen and (max-width: 700px) {
                 font-size: 1.5rem;
             }

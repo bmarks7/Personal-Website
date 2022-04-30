@@ -31,14 +31,12 @@ export default class Home extends Component {
                         <br/><br/>
                         Next summer, I will be joining J.D. Power as a software development intern where I will design, 
                         code, test, debug and analyze software applications for some of the world's largest automotive companies. 
-                        <br /><br />
-                        I built this website using React.js and Sass.
                         </p>
                     </div>
                 </div>
 
                 <div className="Home__links">
-                    <SocialLink url = 'https://www.linkedin.com/in/brandon-m2/' name='LinkedIn' icon={linkedinIcon}/>
+                    <SocialLink url = 'https://www.linkedin.com/in/brandonm3/' name='LinkedIn' icon={linkedinIcon}/>
                     <SocialLink url = 'https://github.com/bmarks7' name='GitHub' icon={githubIcon}/>
                     <SocialLink url = 'https://devpost.com/bmarks50' name='DevPost' icon={devpostIcon}/>
                 </div>
@@ -46,11 +44,11 @@ export default class Home extends Component {
                 <div className="Home__skills">
                     <Header text = 'Here are some of the technologies I&apos;ve worked with:'/>
                     <SkillsSection title = "Programming Languages" skills = {['Java', 'Python', 'JavaScript', 'C++', 'C']}/>
-                    <SkillsSection title = "Front End Technologies" skills = {['HTML', 'CSS', 'React.js', 'React Native', 'Angular', 'Bootstrap']}/>
-                    <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django']}/>
-                    <SkillsSection title = "Databases" skills = {['SQL', 'MongoDB', 'MySQL']}/>
+                    <SkillsSection title = "Front End Technologies" skills = {['HTML', 'CSS', 'React', 'React Native', 'Angular', 'Bootstrap']}/>
+                    <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django', 'Express']}/>
+                    <SkillsSection title = "Databases" skills = {['SQL', 'MongoDB', 'MySQL', 'PostgreSQL']}/>
                     <SkillsSection title = "AI and Machine Learning" skills = {['TensorFlow', 'Pandas', 'NumPy']}/>
-                    <SkillsSection title = "Other" skills = {['Git/GitHub', 'AWS', 'JIRA']}/>
+                    <SkillsSection title = "Other" skills = {['Git', 'AWS', 'Jira']}/>
 
                 </div>
                 

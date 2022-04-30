@@ -7,7 +7,6 @@
         margin: 0rem 1rem 1rem 0rem;
         padding: .3rem .5rem .3rem .3rem;
         border-radius: 10px; 
-        background-color: $light-purple;
         box-shadow: none;
         cursor: pointer;
         transition: all .5s; 
@@ -37,10 +36,6 @@
             }
         }
 
-        &:hover{
-            transform: scale(1.05);
-            box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
-            background-color: $light-blue;
-        }
+        @include pageButtonHover;
     }
 }

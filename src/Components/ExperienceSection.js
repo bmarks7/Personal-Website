@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import downPointer from '../Images/downPointer.png';
 import locIcon from '../Images/locIcon.png';
+import calendarIcon from '../Images/calendar.png';
 import Skill from './Skill';
 import Subheader from './Subheader';
 import '../Styles/ExperienceSection.scss';
@@ -58,13 +59,16 @@ export default class ExperienceSection extends Component {
     render() {
         return (
             <div className="ExperienceSection">
-                <div className="ExperienceSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'scale(' + ((this.state.scaleUp) ? 1.05 : 1) + ')', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
+                <div className="ExperienceSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? -10 : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ExperienceSection__header__position">
-                        <a target='_blank' rel="noreferrer" href={this.props.orgLink}><span className="ExperienceSection__header__position__org">{this.props.org}</span></a>
-                        <span className="ExperienceSection__header__position__title"> - {this.props.title}</span>
+                        <span className="ExperienceSection__header__position__title">{this.props.title}</span>
+                        <span className="ExperienceSection__header__position__org"> - {this.props.org}</span>
                         <br /><br />
-                        <span className="ExperienceSection__header__position__duration">{this.props.duration}</span>
-                        <br /><br />
+                        <div className="ExperienceSection__header__position__duration">
+                            <img src={calendarIcon} alt="duration icon" className="ExperienceSection__header__position__duration__icon"/>
+                            <span className="ExperienceSection__header__position__duration__text">{this.props.duration}</span>
+                        </div>
+                        <br />
                         <div className="ExperienceSection__header__position__loc">
                             <img src={locIcon} alt="location icon" className="ExperienceSection__header__position__loc__icon"/>
                             <span className="ExperienceSection__header__position__loc__name">{this.props.location}</span>

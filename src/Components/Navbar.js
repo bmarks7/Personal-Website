@@ -4,13 +4,12 @@ import '../Styles/Navbar.scss'
 import cssVars from '../Styles/Variables.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
+import { useTransition, animated } from 'react-spring'
 
-const selectedPropsBlue = {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue}
-const selectedPropsPurple = {'transform': 'scale(1.05)', 'boxShadow': '0 1rem 3rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightPurple}
+const selectedPropsBlue = {'transform': 'scale(1.05)', 'boxShadow': '0 .3rem 4rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue}
 const notSelectedProps = {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor}
 
 const selectedPropsMobileBlue = {'backgroundColor': cssVars.lightBlue}
-const selectedPropsMobilePurple = {'backgroundColor': cssVars.lightPurple}
 const notSelectedPropsMobile = {'backgroundColor': cssVars.baseColor}
 
 export default class Navbar extends Component {
@@ -62,7 +61,7 @@ export default class Navbar extends Component {
                 const optionNameMobile = name + 'PropsMobile'
     
                 this.setState({
-                    [optionNameMobile]: selectedPropsMobilePurple
+                    [optionNameMobile]: selectedPropsMobileBlue
                 }, () => { })
             }
         }
@@ -73,7 +72,7 @@ export default class Navbar extends Component {
                 const optionName = name + 'Props';
 
                 this.setState({
-                    [optionName]: selectedPropsPurple,
+                    [optionName]: selectedPropsBlue,
                 }, () => { })
             }
         }

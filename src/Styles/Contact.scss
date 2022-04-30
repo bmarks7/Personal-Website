@@ -11,13 +11,15 @@
 
         &__nameLabel, &__messageLabel, &__emailLabel, &__subjectLabel{
             color: $text-color2;
-            margin-top: 4vh;
             margin-bottom: .5rem;
             font-size: 1.5rem;
 
             @media only screen and (max-width: 700px) {
                 font-size: 1.2rem;
               }
+        }
+        &__messageLabel, &__emailLabel, &__subjectLabel{
+            margin-top: 4vh;
         }
 
         &__nameInput, &__messageInput, &__emailInput, &__subjectInput{
