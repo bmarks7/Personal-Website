@@ -1,17 +1,17 @@
-import Home from './Pages/Home';
-import Contact from './Pages/Contact';
-import Experience from './Pages/Experience';
-import Projects from './Pages/Projects';
-import Resume from './Pages/Resume'
-import Navbar from './Components/Navbar';
+import Home from './Pages/Home/Home';
+import Contact from './Pages/Contact/Contact';
+import Experience from './Pages/Experience/Experience';
+import Projects from './Pages/Projects/Projects';
+import Resume from './Pages/Resume/Resume'
+import Navbar from './Components/Navbar/Navbar';
 import {Route, Switch, Redirect}  from 'react-router-dom';
-import ParticleBackground from './Components/ParticleBackground';
-import Footer from './Components/Footer';
+import ParticleBackground from './Components/ParticleBackground/ParticleBackground';
+import Footer from './Components/Footer/Footer';
 import './App.scss';
 
 function App() {
 
-  const data = localStorage.getItem('navbar-sel')
+  const data = localStorage.getItem('stateObj')
   let route = '/'
 
   if(data){

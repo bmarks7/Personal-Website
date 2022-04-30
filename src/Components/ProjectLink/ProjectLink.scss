@@ -1,0 +1,41 @@
+@import '../../Variables.scss';
+
+.ProjectLink{
+    &__link{
+        display: flex;
+        align-items: center;
+        margin: 0rem 1rem 1rem 0rem;
+        padding: .3rem .5rem .3rem .3rem;
+        border-radius: 10px; 
+        box-shadow: none;
+        cursor: pointer;
+        transition: all .5s; 
+        color: $text-color;
+
+        @media only screen and (max-width: 800px) {
+            margin: 0rem .5rem .5rem 0rem;
+        }
+        
+        &__icon{
+            width: 3rem;
+            height: 3rem;
+            margin-right: .2rem;
+
+            @media only screen and (max-width: 800px) {
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+
+        &__name{
+            color: text-color;
+            font-size: 1.5rem;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 1.2rem;
+            }
+        }
+
+        @include pageButtonHover(-5px);
+    }
+}

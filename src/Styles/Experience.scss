@@ -1,9 +1,0 @@
-@import './Variables.scss';
-
-.Experience{
-    @include pageSettings;
-
-    &__section{
-        margin-bottom: 10vh;
-    }
-}

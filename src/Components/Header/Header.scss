@@ -1,0 +1,17 @@
+@import '../../Variables.scss';
+
+.Header{
+    margin: 1rem 0rem;
+    &__text{
+        font-size: 2.3rem;
+        color: $header-color;
+
+        @media only screen and (max-width: 700px) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: 750px) {
+            margin: .5rem 0rem;
+        }
+    }
+}
