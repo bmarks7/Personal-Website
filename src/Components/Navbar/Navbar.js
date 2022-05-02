@@ -141,6 +141,10 @@ function Navbar() {
                 setHomePropsMobile(mobileProps)
                 setHomeProps(props)
                 break;
+            case 'home2':
+                setHomePropsMobile(mobileProps)
+                setHomeProps(props)
+                break;
             case 'experience':
                 setExperiencePropsMobile(mobileProps)
                 setExperienceProps(props)
@@ -173,7 +177,7 @@ function Navbar() {
 
     return (
         <div className='Navbar'>
-            <p className='Navbar__name'>Brandon Marks</p>
+            <Link to='/'><p id='home2' onClick={optionClick} className='Navbar__name'>Brandon Marks</p></Link>
 
             <div className="Navbar__linkDiv"><Link to='/'><p id='home' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={homeProps} className="Navbar__linkDiv__link">Home</p></Link></div>
             <div className="Navbar__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={experienceProps} className="Navbar__linkDiv__link">Experience</p></Link></div>
@@ -211,7 +215,7 @@ function Navbar() {
                     </animated.div>
                 )
             }
-        </div>
+        </div>        
     )
 }
 

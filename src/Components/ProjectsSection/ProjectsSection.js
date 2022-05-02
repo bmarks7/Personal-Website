@@ -6,10 +6,17 @@ import Skill from '../Skill/Skill';
 import ProjectLink from '../ProjectLink/ProjectLink';
 import './ProjectsSection.scss';
 import cssVars from '../../Variables.scss';
+import { isMobile } from 'react-device-detect'
 
 export default class ProjectsSection extends Component {
 
     constructor(props) {
+        let smallScreenValue = false
+
+        if (window.innerWidth <= 700){
+            smallScreenValue = true
+        }
+
         super(props)
         this.state = {
             open: false,
@@ -17,21 +24,50 @@ export default class ProjectsSection extends Component {
             scaleUp: false,
             boxShadow: 'none',
             headerColor: cssVars.baseColor,
+            smallScreen: smallScreenValue,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
         this.sectionStopHover = this.sectionStopHover.bind(this);
         this.paragraphs = this.props.description.split('<br>')
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 700) {
+                this.setState({smallScreen: true})
+            } else{
+                this.setState({smallScreen: false})
+            }
+        })
     }
 
     openSection(e) {
-        this.setState({
-            open: !this.state.open,
-            arrowUp: !this.state.arrowUp,
-            scaleUp: true,
-            boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
-            headerColor: cssVars.lightBlue,
-        });
+        if (isMobile){
+            if (this.state.open === true){
+                this.setState({
+                    open: false,
+                    arrowUp: false,
+                    scaleUp: false,
+                    boxShadow: 'none',
+                    headerColor: cssVars.baseColor,
+                })
+            } else{
+                this.setState({
+                    open: true,
+                    arrowUp: true,
+                    scaleUp: false,
+                    boxShadow: 'none',
+                    headerColor: cssVars.lightBlue,
+                })
+            }
+        } else{
+            this.setState({
+                open: !this.state.open,
+                arrowUp: !this.state.arrowUp,
+                scaleUp: true,
+                boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
+                headerColor: cssVars.lightBlue,
+            });
+        }
     }
 
     sectionHover(e) {
@@ -57,7 +93,7 @@ export default class ProjectsSection extends Component {
     render() {
         return (
             <div className="ProjectsSection">
-                <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? -10 : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
+                <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? ((isMobile) ? -1 : -10) : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ProjectsSection__header__left">
                         
                         <div className="ProjectsSection__header__left__desc">
@@ -74,13 +110,13 @@ export default class ProjectsSection extends Component {
                     <img className="ProjectsSection__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
                 </div>
                 {this.state.open && 
-                    <div className="ProjectsSection__content">
+                    <div className="ProjectsSection__content" style={{transform: 'translateY(' + ((isMobile) ? 0 : -11) + 'px)'}}>
 
                     {(this.props.description !== '') &&
                         <div className="ProjectsSection__content__description">
                             <Subheader text='Description'/>
-                            {this.paragraphs.map((paragraph) => (
-                                <div key={paragraph} className='ProjectsSection__content__description__paragraph'>
+                            {this.paragraphs.map((paragraph, index) => (
+                                <div key={index} className='ProjectsSection__content__description__paragraph'>
                                     <span>{paragraph}</span>
                                 </div>
                             ))}
@@ -92,8 +128,8 @@ export default class ProjectsSection extends Component {
                             <Subheader text='Technologies Used'/>
 
                             <div className="ProjectsSection__content__skills__list">
-                                {this.props.technologies.map((tech) => (
-                                    <Skill name={tech} key={tech}/>
+                                {this.props.technologies.map((tech, index) => (
+                                    <Skill name={tech} key={index}/>
                                 ))}
                             </div>
                         </div>
@@ -104,8 +140,8 @@ export default class ProjectsSection extends Component {
                             <Subheader text='Links'/>
 
                             <div className="ProjectsSection__content__links__list">
-                                {this.props.links.map((link) => (
-                                    <div className="" key={link.name}>
+                                {this.props.links.map((link, index) => (
+                                    <div className="" key={index}>
                                         <ProjectLink name={link.name} url={link.url} icon={link.icon}/>
                                     </div>
                                 ))}
