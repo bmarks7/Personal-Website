@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import {skills_list, categories, colors} from '../../SkillObjs'
+import React from 'react'
 import './Skill.scss';
 
 function Skill (props){

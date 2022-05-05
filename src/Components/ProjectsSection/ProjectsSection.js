@@ -11,11 +11,6 @@ import { isMobile } from 'react-device-detect'
 export default class ProjectsSection extends Component {
 
     constructor(props) {
-        let smallScreenValue = false
-
-        if (window.innerWidth <= 700){
-            smallScreenValue = true
-        }
 
         super(props)
         this.state = {
@@ -24,20 +19,11 @@ export default class ProjectsSection extends Component {
             scaleUp: false,
             boxShadow: 'none',
             headerColor: cssVars.baseColor,
-            smallScreen: smallScreenValue,
         };
         this.openSection = this.openSection.bind(this);
         this.sectionHover = this.sectionHover.bind(this);
         this.sectionStopHover = this.sectionStopHover.bind(this);
         this.paragraphs = this.props.description.split('<br>')
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 700) {
-                this.setState({smallScreen: true})
-            } else{
-                this.setState({smallScreen: false})
-            }
-        })
     }
 
     openSection(e) {
@@ -110,7 +96,7 @@ export default class ProjectsSection extends Component {
                     <img className="ProjectsSection__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
                 </div>
                 {this.state.open && 
-                    <div className="ProjectsSection__content" style={{transform: 'translateY(' + ((isMobile) ? 0 : -11) + 'px)'}}>
+                    <div className="ProjectsSection__content" style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}>
 
                     {(this.props.description !== '') &&
                         <div className="ProjectsSection__content__description">

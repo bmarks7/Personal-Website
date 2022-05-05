@@ -99,7 +99,7 @@ export default class ExperienceSection extends Component {
                     <img className="ExperienceSection__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downpointer" />
                 </div>
                 {this.state.open && 
-                    <div className="ExperienceSection__content" style={{transform: 'translateY(' + ((isMobile) ? 0 : -11) + 'px)'}}>
+                    <div className="ExperienceSection__content" style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}>
 
                         {(this.props.description !== '') &&
                             <div className="ExperienceSection__content__description">

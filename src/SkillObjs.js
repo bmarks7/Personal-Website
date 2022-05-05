@@ -21,18 +21,19 @@ let skills_list = {'Java': {'level': 75, 'category': 0},
                 'NumPy': {'level': 75, 'category': 4},
                 'Pandas': {'level': 55, 'category': 4},
                 'Git': {'level': 60, 'category': 5},
-                'Unix': {'level': 70, 'category': 5},
-                'Jira': {'level': 75, 'category': 5}}
+                'Unix': {'level': 80, 'category': 5},
+                'Jira': {'level': 75, 'category': 5},
+                'AWS': {'level': 30, 'category': 5}}
 
 let categories = ['language', 'frontend', 'backend', 'database', 'ai', 'other']
 
 
 let colors = {'language': {'color1': '#ffcccc', 'color2': '#ff8080'}, 
-            'frontend': {'color1': '#ebccff', 'color2': '#cc80ff'},
+            'frontend': {'color1': '#ffe6f7', 'color2': '#ff99dd'},
             'backend': {'color1': '#ffdab3', 'color2': '#ffa94d'},
             'database': {'color1': '#ccffcc', 'color2': '#66ff66'},
-            'ai': {'color1': '#ffffcc', 'color2': '#ffff4d'},
-            'backend': {'color1': '#ccd9ff', 'color2': '#809fff'}}
+            'ai': {'color1': '#ffffcc', 'color2': '#ffff00'},
+            'other': {'color1': '#ccd9ff', 'color2': '#99b3ff'}}
 
 export {skills_list, categories, colors}
 

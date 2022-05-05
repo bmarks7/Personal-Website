@@ -1,40 +1,70 @@
 import React, { Component } from 'react'
 import downPointer from '../../Images/downPointer.png';
-import Skill from '../Skill/Skill';
+import MeasuredSkill from '../MeasuredSkill/MeasuredSkill';
 import './SkillsList.scss';
 import cssVars from '../../Variables.scss';
 import { isMobile } from 'react-device-detect'
+import {skills_list, categories, colors} from '../../SkillObjs'
 
 export default class SkillsList extends Component {
 
     constructor(props) {
-        let smallScreenValue = false
-
-        if (window.innerWidth <= 700){
-            smallScreenValue = true
-        }
 
         super(props)
+
+        this.openList = this.openList.bind(this);
+        this.sectionHover = this.sectionHover.bind(this);
+        this.sectionStopHover = this.sectionStopHover.bind(this);
+
         this.state = {
             open: false,
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
             headerColor: cssVars.baseColor,
-            smallScreen: smallScreenValue,
+            sorted_skills: [],
         };
 
-        this.openList = this.openList.bind(this);
-        this.sectionHover = this.sectionHover.bind(this);
-        this.sectionStopHover = this.sectionStopHover.bind(this);
+        let skills = this.props.skills;
+        let skills_and_levels = []
+        let level = 0
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 700) {
-                this.setState({smallScreen: true})
-            } else{
-                this.setState({smallScreen: false})
-            }
+        skills.forEach((skill) => {
+            level = skills_list[skill]['level']
+            skills_and_levels.push([skill, level])
         })
+
+        let n = skills_and_levels.length;
+        for (let i = 1; i < n; i++) {
+            // Choosing the first element in our unsorted subarray
+            let current = skills_and_levels[i];
+            // The last element of our sorted subarray
+            let j = i-1; 
+            while ((j > -1) && (current[1] < skills_and_levels[j][1])) {
+                skills_and_levels[j+1] = skills_and_levels[j];
+                j--;
+            }
+            skills_and_levels[j+1] = current;
+        }
+
+        let skills_sorted = []
+        skills_and_levels.forEach((skill_and_level) => {
+            skills_sorted.push(skill_and_level[0])
+        })
+
+        skills_sorted.reverse()
+
+        this.state = {
+            open: false,
+            arrowUp: false,
+            scaleUp: false,
+            boxShadow: 'none',
+            headerColor: cssVars.baseColor,
+            sorted_skills: skills_sorted,
+        };
+
+
+
     }
 
     openList(e) {
@@ -95,9 +125,9 @@ export default class SkillsList extends Component {
                     <img className="SkillsList__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
                 </div>
                 {this.state.open && 
-                     <div className="SkillsList__list" style={{transform: 'translateY(' + ((isMobile) ? 0 : -11) + 'px)'}}>
-                     {this.props.skills.map((skill, index) => (
-                         <Skill name={skill} key={index}/>
+                     <div className="SkillsList__list" style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}>
+                     {this.state.sorted_skills.map((skill, index) => (
+                         <MeasuredSkill name={skill} key={index}/>
                      ))}
                     </div>
                 }
