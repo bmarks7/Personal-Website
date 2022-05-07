@@ -2,28 +2,67 @@ import React, { Component } from 'react'
 import downPointer from '../../Images/downPointer.png';
 import locIcon from '../../Images/locIcon.png';
 import calendarIcon from '../../Images/calendar.png';
-import Skill from '../Skill/Skill';
+import MeasuredSkill from '../MeasuredSkill/MeasuredSkill';
 import Subheader from '../Subheader/Subheader';
 import './ExperienceSection.scss';
 import cssVars from '../../Variables.scss';
 import { isMobile } from 'react-device-detect'
+import {skills_list} from '../../SkillObjs'
 
 export default class ExperienceSection extends Component {
 
     constructor(props) {
 
         super(props)
+
+        this.openSection = this.openSection.bind(this);
+        this.sectionHover = this.sectionHover.bind(this);
+        this.sectionStopHover = this.sectionStopHover.bind(this);
+        this.points = this.props.description.split('<br>')
+
+        let skills = this.props.skills;
+        let skills_and_levels = []
+        let level = 0
+        let category = 0
+
+        skills.forEach((skill) => {
+            if(skills_list[skill] !== undefined){
+                level = skills_list[skill]['level']
+                category = skills_list[skill]['category']
+                if (0 <= level <= 100 && 0 <= category <= 5){
+                    skills_and_levels.push([skill, level])
+                }
+            }
+        })
+
+        let n = skills_and_levels.length;
+        for (let i = 1; i < n; i++) {
+            // Choosing the first element in our unsorted subarray
+            let current = skills_and_levels[i];
+            // The last element of our sorted subarray
+            let j = i-1; 
+            while ((j > -1) && (current[1] < skills_and_levels[j][1])) {
+                skills_and_levels[j+1] = skills_and_levels[j];
+                j--;
+            }
+            skills_and_levels[j+1] = current;
+        }
+
+        let skills_sorted = []
+        skills_and_levels.forEach((skill_and_level) => {
+            skills_sorted.push(skill_and_level[0])
+        })
+
+        skills_sorted.reverse()
+
         this.state = {
             open: false,
             arrowUp: false,
             scaleUp: false,
             boxShadow: 'none',
             headerColor: cssVars.baseColor,
+            sorted_skills: skills_sorted,
         };
-        this.openSection = this.openSection.bind(this);
-        this.sectionHover = this.sectionHover.bind(this);
-        this.sectionStopHover = this.sectionStopHover.bind(this);
-        this.points = this.props.description.split('<br>')
     }
 
     openSection(e) {
@@ -112,13 +151,13 @@ export default class ExperienceSection extends Component {
                             </div>
                         }
 
-                        {(this.props.skills.length > 0) &&
+                        {(this.state.sorted_skills.length > 0) &&
                             <div className="ExperienceSection__content__skills">
                                 <Subheader text='Technologies Used'/>
 
                                 <div className="ExperienceSection__content__skills__list">
-                                    {this.props.skills.map((skill, index) => (
-                                        <Skill name={skill} key={index}/>
+                                    {this.state.sorted_skills.map((skill, index) => (
+                                        <MeasuredSkill name={skill} key={index}/>
                                     ))}
                                 </div>
                             </div>

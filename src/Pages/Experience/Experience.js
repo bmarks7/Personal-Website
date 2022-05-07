@@ -115,7 +115,7 @@ export default class Experience extends Component {
                     - Developed a structured database application and queries using Microsoft Access, SQL and Dia, enabling easier management of many different types of records
                     <br>
                     - Programmed application to automatically create mailing lists and shipping labels using SQL, reducing time spent on routine tasks by 30%'
-                    skills={['SQL', 'Access', 'Dia']}
+                    skills={['SQL', 'MS Access']}
                     />
                 </div>
 

@@ -4,7 +4,7 @@ import MeasuredSkill from '../MeasuredSkill/MeasuredSkill';
 import './SkillsList.scss';
 import cssVars from '../../Variables.scss';
 import { isMobile } from 'react-device-detect'
-import {skills_list, categories, colors} from '../../SkillObjs'
+import {skills_list} from '../../SkillObjs'
 
 export default class SkillsList extends Component {
 
@@ -16,22 +16,19 @@ export default class SkillsList extends Component {
         this.sectionHover = this.sectionHover.bind(this);
         this.sectionStopHover = this.sectionStopHover.bind(this);
 
-        this.state = {
-            open: false,
-            arrowUp: false,
-            scaleUp: false,
-            boxShadow: 'none',
-            headerColor: cssVars.baseColor,
-            sorted_skills: [],
-        };
-
         let skills = this.props.skills;
         let skills_and_levels = []
         let level = 0
+        let category = 0
 
         skills.forEach((skill) => {
-            level = skills_list[skill]['level']
-            skills_and_levels.push([skill, level])
+            if(skills_list[skill] !== undefined){
+                level = skills_list[skill]['level']
+                category = skills_list[skill]['category']
+                if (0 <= level <= 100 && 0 <= category <= 5){
+                    skills_and_levels.push([skill, level])
+                }
+            }
         })
 
         let n = skills_and_levels.length;
@@ -62,9 +59,6 @@ export default class SkillsList extends Component {
             headerColor: cssVars.baseColor,
             sorted_skills: skills_sorted,
         };
-
-
-
     }
 
     openList(e) {
