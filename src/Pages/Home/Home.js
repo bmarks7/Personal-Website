@@ -43,7 +43,7 @@ export default class Home extends Component {
 
                 <div className="Home__skills">
                     <Header text = 'Here are some of the technologies I&apos;ve worked with:'/>
-                    <p className="Home__skills__subheader">How filled each skill is represents how proficient I am in that skill, as a percentage</p>
+                    <p className="Home__skills__subheader">For each skill, the percentage of it that is filled with the darker color represents how proficient I am in it</p>
                     <SkillsSection title = "Programming Languages" skills = {['Java', 'Python', 'JavaScript', 'C++', 'C']}/>
                     <SkillsSection title = "Front End Technologies" skills = {['HTML', 'CSS', 'React', 'React Native', 'Angular', 'Bootstrap']}/>
                     <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django', 'Express']}/>
