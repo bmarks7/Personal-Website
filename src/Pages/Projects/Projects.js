@@ -12,6 +12,16 @@ export default class Other extends Component {
                 <Header text='Here are projects I created at hackathons:'/>
 
                 <ProjectsSection 
+                name = 'EduFlash'
+                event = 'RU Hacks 2022 Hackathon'
+                duration = 'May 2022'
+                description = 'An education platform that increases studnet engagement and learning outcomes through gamification. Users are awarded points for earning good marks on quizzes participating regularly, and these points result in additional marks for students. Using Twilio API, our application sends reminders and notifications to students through SMS messages'
+                skills={['React', 'Flask']}
+                links = {[{name: 'DevPost', url: 'https://devpost.com/software/eduflash', icon: devpostIcon}, {name: 'GitHub', url: 'https://github.com/bmarks7/RU_Hacks_2022', icon: githubIcon}]}
+                // img = {newLiveLogo}
+                />
+
+                <ProjectsSection 
                 name = 'UmmLess.tech'
                 event = 'DeltaHacks 8 Hackathon'
                 duration = 'Jan 2022'

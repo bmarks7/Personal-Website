@@ -29,7 +29,8 @@ let skills_list = {'Java': {'level': 80, 'category': 0},
                 'GCP': {'level': 20, 'category': 5},
                 'SQLAlchemy': {'level': 10, 'category': 3},
                 'Sass': {'level': 70, 'category': 1},
-                'MS Access': {'level': 75, 'category': 3},}
+                'MS Access': {'level': 75, 'category': 3},
+                'Godot': {'level': 60, 'category': 5},}
 
 let categories = ['language', 'frontend', 'backend', 'database', 'ai', 'other']
 
@@ -39,7 +40,7 @@ let colors = {'language': {'color1': '#ffcccc', 'color2': '#ff8080'},
             'backend': {'color1': '#ffdab3', 'color2': '#ffa94d'},
             'database': {'color1': '#ecffe6', 'color2': '#66ff33'},
             'ai': {'color1': '#e6fffa', 'color2': '#33ffd6'},
-            'other': {'color1': '#ffffcc', 'color2': '#ffff00'}}
+            'other': {'color1': '#ffffe6', 'color2': '#ffff00'}}
 
 export {skills_list, categories, colors}
 

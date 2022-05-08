@@ -28,7 +28,7 @@ export default class Experience extends Component {
                     description='
                     ‐ Enhanced journaling and support group features on website using React, Express.js and PostgreSQL, improving many users’ experiences <br>
                     ‐ Coordinated Jira tickets with developers through sprint plannings and stand-ups, and discussed website details with a designer, ensuring efficient completion of tickets'
-                    skills = {['React', 'Express', 'PostgreSQL']}
+                    skills = {['React', 'Express', 'PostgreSQL', 'Jira', 'Git']}
                     />
 
                     <ExperienceSection 
@@ -50,7 +50,7 @@ export default class Experience extends Component {
                     duration='May 2021 - Aug 2021'
                     location='London, ON Canada (Remote)'
                     description = '‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> ‐ Managed version control of source code using Git, improving efficiency of programming tasks<br>'
-                    skills = {['HTML', 'CSS', 'JavaScript', 'Git']}
+                    skills = {['HTML', 'CSS', 'JavaScript', 'Git', 'Godot']}
                     />
                 </div>
 
