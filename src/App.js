@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar/Navbar';
 import {Route, Switch, Redirect}  from 'react-router-dom';
 import ParticleBackground from './Components/ParticleBackground/ParticleBackground';
 import Footer from './Components/Footer/Footer';
+import { isMobile } from 'react-device-detect'
 import './App.scss';
 
 function App() {
@@ -31,7 +32,9 @@ function App() {
   return (
       <div className='App'>
 
+        {!isMobile && 
         <ParticleBackground />
+        }
 
         <Navbar className='App__navbar'/>
 
