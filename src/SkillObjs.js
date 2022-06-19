@@ -36,12 +36,12 @@ let skills_list = {'Java': {'level': 80, 'category': 0},
 let categories = ['language', 'frontend', 'backend', 'database', 'ai', 'other']
 
 
-let colors = {'language': {'color1': '#ffcccc', 'color2': '#ff6666'}, 
-            'frontend': {'color1': '#ffccef', 'color2': '#ff66cf'},
-            'backend': {'color1': '#fff5cc', 'color2': '#ffcf07'},
-            'database': {'color1': '#ccffdd', 'color2': '#00ff55'},
-            'ai': {'color1': '#ccffff', 'color2': '#00ffff'},
-            'other': {'color1': '#efe7dc', 'color2': '#cfb997'}}
+let colors = {'language': {'lightColor': '#ffcccc', 'darkColor': '#ff6666'}, 
+            'frontend': {'lightColor': '#ffccef', 'darkColor': '#ff80d7'},
+            'backend': {'lightColor': '#fff5cc', 'darkColor': '#ffcf07'},
+            'database': {'lightColor': '#ccffdd', 'darkColor': '#00ff55'},
+            'ai': {'lightColor': '#ccffff', 'darkColor': '#00ffff'},
+            'other': {'lightColor': '#efe7dc', 'darkColor': '#cfb997'}}
 
 export {skills_list, categories, colors}
 
