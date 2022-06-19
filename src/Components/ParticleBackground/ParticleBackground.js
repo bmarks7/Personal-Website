@@ -35,7 +35,7 @@ export default class ParticleBackground extends Component {
                     },
                     size: {
                         random: true,
-                        value: 15,
+                        value: 30,
                     },
                     },
                 }}

@@ -37,12 +37,11 @@
 
 $header-color: white;
 $base-color: white;
-$background-purple: #6600ff;
-$background-blue: #8a00e6;
-$text-color: #002266;
+$background-left: #003399;
+$background-right: #6696ff;
+$text-color: #001a4d;
 $text-color2: white;
 
-$light-purple: #e6ccff;
 $light-blue: #e6eeff;
 
 $downPointer-height: 2.5rem;
@@ -51,11 +50,10 @@ $downPointer-width: 2.5rem;
 :export{
     headerColor: $header-color;
     baseColor: $base-color;
-    backgroundPurple: $background-purple;
-    backgroundBlue: $background-blue;
+    backgroundLeft: $background-left;
+    backgroundRight: $background-right;
     textColor: $text-color;
     textColor2: $text-color2;
-    lightPurple: $light-purple;
     lightBlue: $light-blue;
     downPointerHeight: $downPointer-height;
     downPointerWidth: $downPointer-width;

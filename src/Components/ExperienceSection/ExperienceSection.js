@@ -118,7 +118,7 @@ export default class ExperienceSection extends Component {
 
     render() {
         return (
-            <div className="ExperienceSection">
+            <div className="ExperienceSection" data-aos='fade-right'>
                 <div className="ExperienceSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? ((isMobile) ? -1 : -10) : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ExperienceSection__header__position">
                         <span className="ExperienceSection__header__position__title">{this.props.title}</span>

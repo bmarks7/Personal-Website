@@ -118,7 +118,7 @@ export default class ProjectsSection extends Component {
 
     render() {
         return (
-            <div className="ProjectsSection">
+            <div className="ProjectsSection" data-aos='fade-right'>
                 <div className="ProjectsSection__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openSection} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? ((isMobile) ? -1 : -10) : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
                     <div className="ProjectsSection__header__left">
                         

@@ -8,9 +8,17 @@ import {Route, Switch, Redirect}  from 'react-router-dom';
 import ParticleBackground from './Components/ParticleBackground/ParticleBackground';
 import Footer from './Components/Footer/Footer';
 import { isMobile } from 'react-device-detect'
+import Aos from 'aos'
+import "aos/dist/aos.css"
 import './App.scss';
 
 function App() {
+
+  Aos.init({duration: 1300,
+            once: true})
+  Aos.refresh()
+
+  window.scroll(0, 0);
 
   const data = localStorage.getItem('stateObj')
   let route = '/'

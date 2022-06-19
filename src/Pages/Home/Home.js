@@ -6,8 +6,8 @@ import linkedinIcon from '../../Images/linkedinIcon.png';
 import SkillsSection from '../../Components/SkillsList/SkillsList';
 import SocialLink from '../../Components/SocialLink/SocialLink';
 import Header from '../../Components/Header/Header';
-
 import './Home.scss'
+
 
 export default class Home extends Component {
 
@@ -15,23 +15,25 @@ export default class Home extends Component {
         return (
             <div className='Home'>
 
-                <div className='Home__intro'>
-                    <img className='Home__intro__img' src={facePic} alt="professional pic"/>
-                    <div className="Home__intro__description">
-                        <Header text = 'About Me' className='Home__intro__description__header'/>
-                        <p className="Home__intro__description__text">Hi, I'm Brandon! I'm a third-year computer science student 
-                        at Western University in London, Ontario and am based in the Greater Toronto Area.
-                        <br/><br/> 
-                        I have been programming since I was 12 years old, and I am passionate about pushing the boundaries of
-                        what's possible with technology. I am interested in becoming a software developer upon graduation
-                        so that I can build robust software that can deliver great results. 
-                        <br/><br/> 
-                        I have experience building full stack web and mobile applications and I currently plan to learn
-                        more about machine learning and cloud computing.
-                        <br/><br/>
-                        Next summer, I will be joining J.D. Power as a software development intern where I will design, 
-                        code, test, debug and analyze software applications for some of the world's largest automotive companies. 
-                        </p>
+                <div className='Home__intro' data-aos='fade-right'>
+                    <img className='Home__intro__img' src={facePic} alt="professional pic" data-aos='fade-right'/>
+                    <div className="Home__intro__about">
+                        <Header text = 'About Me' className='Home__intro__about__description__header'/>
+                        <div className="Home__intro__about__description" data-aos='fade-right'>
+                            <p className="Home__intro__about__description__text">Hi, I'm Brandon! I'm a third-year computer science student 
+                            at Western University in London, Ontario and am based in the Greater Toronto Area.
+                            <br/><br/> 
+                            I have been programming since I was 12 years old, and I am passionate about pushing the boundaries of
+                            what's possible with technology. I am interested in becoming a software developer upon graduation
+                            so that I can build robust software that can deliver great results. 
+                            <br/><br/> 
+                            I have experience building full stack web and mobile applications and I currently plan to learn
+                            more about machine learning and cloud computing.
+                            <br/><br/>
+                            Next summer, I will be joining J.D. Power as a software development intern where I will design, 
+                            code, test, debug and analyze software applications for some of the world's largest automotive companies. 
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -43,10 +45,10 @@ export default class Home extends Component {
 
                 <div className="Home__skills">
                     <Header text = 'Here are some of the technologies I&apos;ve worked with:'/>
-                    <p className="Home__skills__subheader">For each skill, the percentage of it that is filled with the darker color represents how proficient I am in it</p>
+                    <p data-aos='fade-right' className="Home__skills__subheader">For each skill, the percentage of it that is filled with the darker color represents how proficient I am in it</p>
                     <SkillsSection title = "Programming Languages" skills = {['Java', 'Python', 'JavaScript', 'C++', 'C']}/>
                     <SkillsSection title = "Front End Technologies" skills = {['HTML', 'CSS', 'React', 'React Native', 'Angular', 'Bootstrap']}/>
-                    <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django', 'Express']}/>
+                    <SkillsSection title = "Back End Technologies" skills = {['Node.js', 'Flask', 'Django', 'Spring Boot']}/>
                     <SkillsSection title = "Databases" skills = {['SQL', 'MongoDB', 'MySQL', 'PostgreSQL']}/>
                     <SkillsSection title = "AI and Machine Learning" skills = {['TensorFlow', 'Pandas', 'NumPy']}/>
                     <SkillsSection title = "Other" skills = {['Git', 'AWS', 'Jira', 'Unix']}/>

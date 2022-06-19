@@ -69,7 +69,7 @@ export default class Contact extends Component {
         return (
             <div className='Contact'>
                 <Header text='If you would like to connect with me, you can fill out the form below and I&apos;ll get back to you by email'/>
-                <form className="Contact__form" onSubmit={this.sendEmail}>
+                <form className="Contact__form" onSubmit={this.sendEmail} data-aos='fade-right'>
                     <label className='Contact__form__nameLabel'>Name:</label>
                     <input required className='Contact__form__nameInput' type="text" name='sender_name'/>
 

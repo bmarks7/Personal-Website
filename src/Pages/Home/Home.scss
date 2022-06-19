@@ -1,6 +1,8 @@
 @import '../../Variables.scss';
 
 .Home{
+    overflow-x: hidden;
+
     &__intro{
 
         display: flex;
@@ -29,26 +31,30 @@
             }
         }
 
-        &__description{
+        &__about{
+
             margin: 1rem 3rem 3rem 3rem;
 
             @media only screen and (max-width: 500px) {
                 margin: 1.5rem;
             }
 
-            &__text{
-                font-size: 1.5rem;
-                color: $text-color;
-                background-color: $base-color;
-                padding: 1rem;
-                border-radius: 10px;
+            &__description{
 
-                @media only screen and (max-width: 800px) {
-                    font-size: 1.2rem;
-                }
+                &__text{
+                    font-size: 1.5rem;
+                    color: $text-color;
+                    background-color: $base-color;
+                    padding: 1rem;
+                    border-radius: 10px;
 
-                @media only screen and (max-width: 500px) {
-                    font-size: 1rem;
+                    @media only screen and (max-width: 800px) {
+                        font-size: 1.2rem;
+                    }
+
+                    @media only screen and (max-width: 500px) {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
@@ -95,3 +101,4 @@
         }
     }
 }
+

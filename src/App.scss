@@ -1,8 +1,8 @@
 @import './Variables.scss';
 
 .App{
-  background-image: linear-gradient(to right, $background-blue, $background-purple);
-  width: 100vw;
+  background-image: linear-gradient(to right, $background-left, $background-right);
+  width: 100%;
   min-height: 1000px;
 
   &__content{
