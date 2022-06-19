@@ -10,7 +10,7 @@
     background-color: $base-color;
     box-shadow: none;
     cursor: pointer;
-    transition: all .5s;  
+    transition: all $animation_duration;  
 }
 
 @mixin pageSettings($width) {
@@ -28,11 +28,29 @@
 @mixin downPointerProps{
     width: $downPointer-width;
     height: $downPointer-height;
-    transition: all .5s; 
+    transition: all $animation_duration; 
     @media only screen and (max-width: 700px) {
         width: 2rem;
         height: 2rem;
     }
+}
+
+@mixin sectionHeaderProps{
+    background-color: $base-color;
+    border-radius: 15px;
+    transition: background-color $animation_duration, box-shadow $animation_duration, transform $animation_duration;
+    cursor: pointer;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin sectionContentProps{
+    background-color: $base-color;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 0rem 1rem 3rem rgba(0,0,0,.25);
+    transform: translateY(-11px);
 }
 
 $header-color: white;
@@ -46,6 +64,8 @@ $light-blue: #e6eeff;
 
 $downPointer-height: 2.5rem;
 $downPointer-width: 2.5rem;
+
+$animation_duration: .5s;
 
 :export{
     headerColor: $header-color;

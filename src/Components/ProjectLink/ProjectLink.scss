@@ -9,7 +9,7 @@
         border-radius: 10px; 
         box-shadow: none;
         cursor: pointer;
-        transition: all .5s; 
+        transition: all $animation_duration; 
         color: $text-color;
 
         @media only screen and (max-width: 800px) {
@@ -36,6 +36,8 @@
             }
         }
 
+        @include pageButtonNotHover;
         @include pageButtonHover(-5px);
     }
 }
+

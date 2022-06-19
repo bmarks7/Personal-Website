@@ -85,7 +85,7 @@ export default class SkillsList extends Component {
                 open: !this.state.open,
                 arrowUp: !this.state.arrowUp,
                 scaleUp: true,
-                boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
+                boxShadow: '0rem 1rem 3rem rgba(0,0,0,.25)',
                 headerColor: cssVars.lightBlue,
             });
         }
@@ -95,7 +95,7 @@ export default class SkillsList extends Component {
         if (this.state.open === false) {
             this.setState({
                 scaleUp: true,
-                boxShadow: '0 1rem 3rem rgba(0,0,0,.25)',
+                boxShadow: '0rem 1rem 3rem rgba(0,0,0,.25)',
                 headerColor: cssVars.lightBlue,
             })
         }
@@ -114,18 +114,19 @@ export default class SkillsList extends Component {
     render() {
         return (
             <div className="SkillsList" data-aos='fade-right'>
-                <div className="SkillsList__header" onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openList} style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow ,transform: 'translateY(' + ((this.state.scaleUp) ? ((isMobile) ? -1 : -10) : 0) + 'px)', borderRadius: this.state.open ? '15px 15px 0px 0px' : '15px 15px 15px 15px'}}>
+                <div onMouseEnter={this.sectionHover} onMouseLeave={this.sectionStopHover} onClick={this.openList} className="SkillsList__header" style={{backgroundColor: this.state.headerColor, boxShadow: this.state.boxShadow, transform: 'translateY(' + ((this.state.scaleUp) ? ((isMobile) ? -1 : -10) : 0) + 'px)', borderRadius: ((this.state.open) ? '15px 15px 0px 0px' : '15px 15px 15px 15px')}}>
                     <p className="SkillsList__header__text">{this.props.title}</p>
                     <img className="SkillsList__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
                 </div>
                 {this.state.open && 
-                     <div className="SkillsList__list" style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}>
-                     {this.state.sorted_skills.map((skill, index) => (
-                         <MeasuredSkill name={skill} key={index}/>
-                     ))}
+                     <div className="SkillsList__list">
+                        {this.state.sorted_skills.map((skill, index) => (
+                            <MeasuredSkill name={skill} key={index}/>
+                        ))}
                     </div>
                 }
             </div>
         )
     }
 }
+// style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}

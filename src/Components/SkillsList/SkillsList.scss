@@ -8,14 +8,8 @@
     }
 
     &__header{
-        background-color: $base-color;
-        padding: 1rem 1rem;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        transition: transform .5s, box-shadow .5s, background-color .5s;
-        cursor: pointer;
+
+        @include sectionHeaderProps;
 
         @media only screen and (max-width: 500px) {
             padding: .5rem .5rem;
@@ -40,8 +34,9 @@
     &__list{
         display: flex;
         flex-wrap: wrap;
-        background-color: $base-color;
         padding: 1rem 1rem;
-        border-radius: 0px 0px 10px 10px;
+
+        @include sectionContentProps;
+
     }
 }

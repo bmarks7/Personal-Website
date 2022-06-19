@@ -47,7 +47,7 @@
         &__link{
             color: $text-color;
             font-size: 1.5rem;
-            transition: all .5s; 
+            transition: all $animation_duration; 
             box-shadow: none;
             padding: .3rem .5rem;
             border-radius: 10px;
@@ -80,7 +80,7 @@
             &__link{
                 color: $text-color;
                 font-size: 1.5rem;
-                transition: all .5s; 
+                transition: all $animation_duration; 
                 box-shadow: none;
                 padding: 1.5rem 1rem;
                 margin: .1rem 0rem;

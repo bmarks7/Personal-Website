@@ -12,19 +12,28 @@ export default class Experience extends Component {
                     <Header text='Here is my relevant work experience:'/>
 
                     <ExperienceSection 
+                    org = 'Gunkii'
+                    title = 'Software Developer'
+                    duration = 'Jun 2022 - Present'
+                    location='Vancouver, BC Canada'
+                    description='Coming Soon'
+                    skills = {[]}
+                    />
+
+                    <ExperienceSection 
                     org = 'J.D. Power'
                     title = 'Software Developer'
                     duration = 'May 2022 - Present'
                     location='London, ON Canada'
                     description='Coming Soon'
-                    skills = {[]}
+                    skills = {['Spring Boot', 'Java']}
                     />
 
                     <ExperienceSection 
                     org = 'Honest Empathy'
                     title = 'Software Developer'
                     duration = 'Feb 2022 - Present'
-                    location='Vancouver, BC Canada (Remote)'
+                    location='Vancouver, BC Canada'
                     description='
                     ‐ Enhanced journaling and support group features on website using React, Express.js and PostgreSQL, improving many users’ experiences <br>
                     ‐ Coordinated Jira tickets with developers through sprint plannings and stand-ups, and discussed website details with a designer, ensuring efficient completion of tickets'
@@ -35,7 +44,7 @@ export default class Experience extends Component {
                     org = 'eHacks Events'
                     title = 'Full Stack Developer'
                     duration = 'Jul 2021 - Jan 2022'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description='
                     ‐ Implementing responsive design and maintainable code using React, Sass, Node.js and MongoDB,
                     creating a user-friendly website for 200 hackathon participants <br>
@@ -48,7 +57,7 @@ export default class Experience extends Component {
                     org='OGSR Library' 
                     title ='Software Developer' 
                     duration='May 2021 - Aug 2021'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description = '‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> ‐ Managed version control of source code using Git, improving efficiency of programming tasks<br>'
                     skills = {['HTML', 'CSS', 'JavaScript', 'Git', 'Godot']}
                     />
@@ -61,7 +70,7 @@ export default class Experience extends Component {
                     org = 'Western Computer Science Undergraduate Society'
                     title = 'Web Developer'
                     duration = 'Mar 2022 - Apr 2022'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description='Developing a new website for the Computer Science Undergraduate Society at Western University'
                     skills = {['React', 'Git']}
                     />
@@ -70,7 +79,7 @@ export default class Experience extends Component {
                     org = 'Western AI'
                     title = 'Machine Learning Project Manager'
                     duration = 'Oct 2020 - Jan 2021'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description='
                     - Managed a team of 4 students in developing a machine learning model with a convolutional neural network, using TensorFlow, Scikit-learn and NumPy, that performs music genre classification, creating an effective model
                     <br>
@@ -84,7 +93,7 @@ export default class Experience extends Component {
                     org = 'Western AI'
                     title = 'Machine Learning Project Manager'
                     duration = 'Jun 2020 - Aug 2021'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description='
                     - Led a team of 4 students to create an animal image classification ML model with a convolutional neural network using TensorFlow and NumPy, achieving an accuracy of 98.5%
                     <br>
@@ -98,7 +107,7 @@ export default class Experience extends Component {
                     org = 'Western AI'
                     title = 'Member'
                     duration = 'Oct 2019 - Mar 2020'
-                    location='London, ON Canada (Remote)'
+                    location='London, ON Canada'
                     description='Developed experience with machine learning concepts'
                     skills={['Pandas', 'NumPy', 'TensorFlow']}
                     />
@@ -110,7 +119,7 @@ export default class Experience extends Component {
                     org = 'St. John The Compassionate Mission'
                     title = 'Database Developer'
                     duration = 'Jun 2020 - Aug 2020'
-                    location='Toronto, ON Canada (Remote)'
+                    location='Toronto, ON Canada'
                     description='
                     - Developed a structured database application and queries using Microsoft Access, SQL and Dia, enabling easier management of many different types of records
                     <br>

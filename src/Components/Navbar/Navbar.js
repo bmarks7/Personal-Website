@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import { useTransition, animated } from 'react-spring'
 
-const selectedProps = {'transform': 'scale(1.05)', 'boxShadow': '0 .3rem 4rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue}
+const selectedProps = {'transform': 'scale(1.05)', 'boxShadow': '.3rem .3rem 4rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue}
 const notSelectedProps = {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor}
 
 const selectedPropsMobile = {'backgroundColor': cssVars.lightBlue}

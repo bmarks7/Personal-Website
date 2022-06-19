@@ -23,15 +23,15 @@ export default class Home extends Component {
                             <p className="Home__intro__about__description__text">Hi, I'm Brandon! I'm a third-year computer science student 
                             at Western University in London, Ontario and am based in the Greater Toronto Area.
                             <br/><br/> 
-                            I have been programming since I was 12 years old, and I am passionate about pushing the boundaries of
+                            I started programming when I was 12 years old, when I attended a STEM summer camp at the University
+                            of Toronto where I learned to use Python. I am passionate about pushing the boundaries of
                             what's possible with technology. I am interested in becoming a software developer upon graduation
                             so that I can build robust software that can deliver great results. 
                             <br/><br/> 
                             I have experience building full stack web and mobile applications and I currently plan to learn
                             more about machine learning and cloud computing.
                             <br/><br/>
-                            Next summer, I will be joining J.D. Power as a software development intern where I will design, 
-                            code, test, debug and analyze software applications for some of the world's largest automotive companies. 
+                            I'm currently a software developer intern at J.D. Power on the General Motors team. 
                             </p>
                         </div>
                     </div>
