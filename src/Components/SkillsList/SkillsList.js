@@ -119,7 +119,7 @@ export default class SkillsList extends Component {
                     <img className="SkillsList__header__downPointer" src={downPointer} style={{transform: 'rotate(' + ((this.state.open) ? 180 : 0)  + 'deg)'}} alt="downPointer" />
                 </div>
                 {this.state.open && 
-                     <div className="SkillsList__list">
+                     <div className="SkillsList__list" style={{transform: 'translateY(' + ((isMobile) ? -1 : -11) + 'px)'}}>
                         {this.state.sorted_skills.map((skill, index) => (
                             <MeasuredSkill name={skill} key={index}/>
                         ))}
