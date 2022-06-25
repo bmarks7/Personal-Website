@@ -16,7 +16,7 @@ function App() {
 
   Aos.init({duration: 1300,
             once: true})
-  Aos.refresh()
+  window.addEventListener('load', Aos.refresh);
 
   window.scroll(0, 0);
 
