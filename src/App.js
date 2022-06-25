@@ -18,8 +18,6 @@ function App() {
             once: true,
             startEvent: 'load'})
 
-  window.scroll(0, 0);
-
   const data = localStorage.getItem('stateObj')
   let route = '/'
 
