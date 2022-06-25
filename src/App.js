@@ -16,7 +16,10 @@ function App() {
 
   Aos.init({duration: 1300,
             once: true})
-  window.addEventListener('load', Aos.refresh);
+
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() { Aos.refresh(); }, 500);
+  });
 
   window.scroll(0, 0);
 
