@@ -15,7 +15,8 @@ import './App.scss';
 function App() {
 
   Aos.init({duration: 1300,
-            once: true})
+            once: true,
+            startEvent: 'load'})
 
   document.addEventListener("DOMContentLoaded", function() {
     Aos.refresh()
