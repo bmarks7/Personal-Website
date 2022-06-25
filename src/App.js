@@ -18,10 +18,6 @@ function App() {
             once: true,
             startEvent: 'load'})
 
-  document.addEventListener("DOMContentLoaded", function() {
-    Aos.refresh()
-  });
-
   window.scroll(0, 0);
 
   const data = localStorage.getItem('stateObj')
