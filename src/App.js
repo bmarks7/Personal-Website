@@ -18,7 +18,7 @@ function App() {
             once: true})
 
   document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(function() { Aos.refresh(); }, 500);
+    Aos.refresh()
   });
 
   window.scroll(0, 0);
