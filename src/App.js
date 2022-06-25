@@ -15,8 +15,12 @@ import './App.scss';
 function App() {
 
   Aos.init({duration: 1300,
-            once: true,
-            startEvent: 'load'})
+            once: true})
+
+  window.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0)
+    Aos.refresh()
+  });
 
   const data = localStorage.getItem('stateObj')
   let route = '/'
