@@ -17,7 +17,7 @@ function App() {
   Aos.init({duration: 1300,
             once: true})
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
     window.scrollTo(0, 0)
     Aos.refresh()
   });
