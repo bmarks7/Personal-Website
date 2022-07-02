@@ -186,27 +186,29 @@ function Navbar() {
 
     return (
         <div className='Navbar'>
-            <div className='Navbar__name'>
-                <Link to='/'><p id='home2' className='Navbar__name__text'>Brandon Marks</p></Link>
-            </div>
-            
-            <div className='Navbar__links'>
-                <div className="Navbar__links__linkDiv"><Link to='/'><p id='home' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={homeProps} className="Navbar__links__linkDiv__link">Home</p></Link></div>
-                <div className="Navbar__links__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={experienceProps} className="Navbar__links__linkDiv__link">Experience</p></Link></div>
-                <div className="Navbar__links__linkDiv"><Link to='/projects'><p id='projects' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={projectsProps} className="Navbar__links__linkDiv__link">Projects</p></Link></div>
-                <div className="Navbar__links__linkDiv"><Link to='/resume'><p id='resume' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={resumeProps} className="Navbar__links__linkDiv__link">Resume</p></Link></div>
-                <div className="Navbar__links__linkDiv"><Link to='/contact'><p id='contact' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={contactProps} className="Navbar__links__linkDiv__link">Contact</p></Link></div>
+            <div className="Navbar__top">
+                <div className='Navbar__top__name'>
+                    <Link to='/'><p id='home2' className='Navbar__top__name__text'>Brandon Marks</p></Link>
+                </div>
+                
+                <div className='Navbar__top__links'>
+                    <div className="Navbar__top__links__linkDiv"><Link to='/'><p id='home' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={homeProps} className="Navbar__top__links__linkDiv__link">Home</p></Link></div>
+                    <div className="Navbar__top__links__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={experienceProps} className="Navbar__top__links__linkDiv__link">Experience</p></Link></div>
+                    <div className="Navbar__top__links__linkDiv"><Link to='/projects'><p id='projects' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={projectsProps} className="Navbar__top__links__linkDiv__link">Projects</p></Link></div>
+                    <div className="Navbar__top__links__linkDiv"><Link to='/resume'><p id='resume' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={resumeProps} className="Navbar__top__links__linkDiv__link">Resume</p></Link></div>
+                    <div className="Navbar__top__links__linkDiv"><Link to='/contact'><p id='contact' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={contactProps} className="Navbar__top__links__linkDiv__link">Contact</p></Link></div>
 
-                <nav className='Navbar__links__mobile' id='mobile_menu_btn'>
-                    <FontAwesomeIcon className='Navbar__links__mobile__icon'
-                        
-                        icon={faBars}
-                        onClick = {() => {
-                            setOpen(!open)
-                        }}
-                    />
-                </nav>
+                    <nav className='Navbar__top__links__mobile' id='mobile_menu_btn'>
+                        <FontAwesomeIcon className='Navbar__top__links__mobile__icon'
+                            
+                            icon={faBars}
+                            onClick = {() => {
+                                setOpen(!open)
+                            }}
+                        />
+                    </nav>
 
+                </div>
             </div>
             {
                 maskTransitions(
