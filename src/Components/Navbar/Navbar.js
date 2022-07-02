@@ -5,6 +5,7 @@ import cssVars from '../../Variables.scss';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import { useTransition, animated } from 'react-spring'
+import { useLocation } from "react-router-dom";
 
 const selectedProps = {'transform': 'scale(1.05)', 'boxShadow': '.3rem .3rem 4rem rgba(0,0,0,.25)', 'backgroundColor': cssVars.lightBlue}
 const notSelectedProps = {'transform': 'scale(1)', 'boxShadow': 'none', 'backgroundColor': cssVars.baseColor}
@@ -31,6 +32,28 @@ function Navbar() {
 
     const [contactProps, setContactProps] = useState(notSelectedProps)
     const [contactPropsMobile, setContactPropsMobile] = useState(notSelectedPropsMobile)
+
+    const location = useLocation();
+
+    const mobileScreenSize = 700;
+
+    useEffect(() => {
+        let name = location.pathname.substring(1)
+        if(name === ""){
+            name = 'home'
+        }
+
+        if(isMobileSize()){
+            setOpen(false)
+        }
+
+        // If the user has not selected this option
+        if (selectedOption !== name) {
+            changeSelectProps(selectedOption, false)
+            changeSelectProps(name, true)
+            setSelectedOption(name)
+        }
+      }, [location]);
 
     const maskTransitions = useTransition(open, {
         from: { opacity: 0 },
@@ -108,24 +131,6 @@ function Navbar() {
 
     }
 
-    function optionClick(e){
-        let name = e.target.id
-
-        if(name.includes('Mobile')){
-            name = name.replace('Mobile', '')
-            setOpen(false)
-        }
-
-        // If the user has not selected this option
-        if (selectedOption !== name) {
-
-            changeSelectProps(selectedOption, false)
-            changeSelectProps(name, true)
-            setSelectedOption(name)
-        }
-
-    }
-
     function changeSelectProps(optionName, selected){
         let props = {}
         let mobileProps = {}
@@ -165,35 +170,44 @@ function Navbar() {
         }
     }
 
+    function isMobileSize(){
+        return (window.innerWidth <= mobileScreenSize)
+    }
+
     window.onresize = removeMobileNavbar;
     
     // When we open the option button in mobile and then resize
     // the screen back to desktop, this function closes the mobile option button
     function removeMobileNavbar() {
-        if (window.innerWidth > 700 && open === true) {
+        if (!isMobileSize() && open === true) {
             document.getElementById('mobile_menu_mask').click();
         } 
     }
 
     return (
         <div className='Navbar'>
-            <Link to='/'><p id='home2' onClick={optionClick} className='Navbar__name'>Brandon Marks</p></Link>
+            <div className='Navbar__name'>
+                <Link to='/'><p id='home2' className='Navbar__name__text'>Brandon Marks</p></Link>
+            </div>
+            
+            <div className='Navbar__links'>
+                <div className="Navbar__links__linkDiv"><Link to='/'><p id='home' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={homeProps} className="Navbar__links__linkDiv__link">Home</p></Link></div>
+                <div className="Navbar__links__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={experienceProps} className="Navbar__links__linkDiv__link">Experience</p></Link></div>
+                <div className="Navbar__links__linkDiv"><Link to='/projects'><p id='projects' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={projectsProps} className="Navbar__links__linkDiv__link">Projects</p></Link></div>
+                <div className="Navbar__links__linkDiv"><Link to='/resume'><p id='resume' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={resumeProps} className="Navbar__links__linkDiv__link">Resume</p></Link></div>
+                <div className="Navbar__links__linkDiv"><Link to='/contact'><p id='contact' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={contactProps} className="Navbar__links__linkDiv__link">Contact</p></Link></div>
 
-            <div className="Navbar__linkDiv"><Link to='/'><p id='home' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={homeProps} className="Navbar__linkDiv__link">Home</p></Link></div>
-            <div className="Navbar__linkDiv"><Link to='/experience'><p id='experience' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={experienceProps} className="Navbar__linkDiv__link">Experience</p></Link></div>
-            <div className="Navbar__linkDiv"><Link to='/projects'><p id='projects' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={projectsProps} className="Navbar__linkDiv__link">Projects</p></Link></div>
-            <div className="Navbar__linkDiv"><Link to='/resume'><p id='resume' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={resumeProps} className="Navbar__linkDiv__link">Resume</p></Link></div>
-            <div className="Navbar__linkDiv"><Link to='/contact'><p id='contact' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={contactProps} className="Navbar__linkDiv__link">Contact</p></Link></div>
+                <nav className='Navbar__links__mobile' id='mobile_menu_btn'>
+                    <FontAwesomeIcon className='Navbar__links__mobile__icon'
+                        
+                        icon={faBars}
+                        onClick = {() => {
+                            setOpen(!open)
+                        }}
+                    />
+                </nav>
 
-            <nav className='Navbar__mobile' id='mobile_menu_btn'>
-                <FontAwesomeIcon className='Navbar__mobile__icon'
-                    
-                    icon={faBars}
-                    onClick = {() => {
-                        setOpen(!open)
-                    }}
-                />
-            </nav>
+            </div>
             {
                 maskTransitions(
                     (styles, item) => item && <animated.div style={styles} 
@@ -207,11 +221,11 @@ function Navbar() {
             {
                 menuTransitions(
                     (styles, item) => item && <animated.div style={styles} className='Navbar__mobile__menu'>
-                        <Link to='/'><p id='homeMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={homePropsMobile} className="Navbar__mobile__menu__link">Home</p></Link>
-                        <Link to='/experience'><p id='experienceMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={experiencePropsMobile} className="Navbar__mobile__menu__link">Experience</p></Link>
-                        <Link to='/projects'><p id='projectsMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={projectsPropsMobile} className="Navbar__mobile__menu__link">Projects</p></Link>
-                        <Link to='/resume'><p id='resumeMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={resumePropsMobile} className="Navbar__mobile__menu__link">Resume</p></Link>
-                        <Link to='/contact'><p id='contactMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} onClick={optionClick} style={contactPropsMobile} className="Navbar__mobile__menu__link">Contact</p></Link>
+                        <Link to='/'><p id='homeMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={homePropsMobile} className="Navbar__mobile__menu__link">Home</p></Link>
+                        <Link to='/experience'><p id='experienceMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={experiencePropsMobile} className="Navbar__mobile__menu__link">Experience</p></Link>
+                        <Link to='/projects'><p id='projectsMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={projectsPropsMobile} className="Navbar__mobile__menu__link">Projects</p></Link>
+                        <Link to='/resume'><p id='resumeMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={resumePropsMobile} className="Navbar__mobile__menu__link">Resume</p></Link>
+                        <Link to='/contact'><p id='contactMobile' onMouseEnter = {optionHover} onMouseLeave = {optionStopHover} style={contactPropsMobile} className="Navbar__mobile__menu__link">Contact</p></Link>
                     </animated.div>
                 )
             }

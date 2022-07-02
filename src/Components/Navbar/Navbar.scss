@@ -2,7 +2,7 @@
 
 .Navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 2vh 0;
     background-color: $base-color;
@@ -18,51 +18,82 @@
     }
 
     &__name{
-        color: $text-color;
-        display: inline;
-        flex-basis: 30vw;
-        font-size: 2.5rem;
-        font-weight: bold;
+        flex-basis: 35vw;
 
-        @media only screen and (max-width: 1000px) {
-            font-size: 1.5rem;
+        &__text{
+            color: $text-color;
+            display: inline;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: 1rem;
+
+            @media only screen and (max-width: 1000px) {
+                font-size: 1.5rem;
+            }
+
+            @media only screen and (max-width: 700px) {
+                margin-left: .5rem;
+            }
+
+            @media only screen and (max-width: 400px) {
+                font-size: 1.3rem;
+            }
         }
 
         @media only screen and (max-width: 700px) {
-            margin-left: 3vw;
             flex-basis: 70vw;
-        }
-
-        @media only screen and (max-width: 400px) {
-            font-size: 1.3rem;
         }
     }
 
-    &__linkDiv{
+    &__links{
+        display: flex;
+        justify-content: space-around;
+        flex-basis: 65vw;
 
-        @media only screen and (max-width: 700px) {
-            display: none;
+        &__linkDiv{
+
+            @media only screen and (max-width: 700px) {
+                display: none;
+            }
+
+            &__link{
+                color: $text-color;
+                font-size: 1.5rem;
+                transition: all $animation_duration; 
+                box-shadow: none;
+                padding: .3rem .5rem;
+                border-radius: 10px;
+
+                @media only screen and (max-width: 1000px) {
+                    font-size: 1rem;
+                    padding: .15rem .3rem;
+                    border-radius: 5px;
+                }
+            }
         }
 
-        &__link{
-            color: $text-color;
-            font-size: 1.5rem;
-            transition: all $animation_duration; 
-            box-shadow: none;
-            padding: .3rem .5rem;
-            border-radius: 10px;
-
-            @media only screen and (max-width: 1000px) {
-                font-size: 1rem;
-                padding: .15rem .3rem;
-                border-radius: 5px;
+        &__mobile{
+            display: none;
+    
+            @media only screen and (max-width: 700px) {
+                display: inline;
             }
+    
+            &__icon{
+                font-size: 2rem;
+                margin-right: .5rem;
+            }
+    
+        }
+
+        @media only screen and (max-width: 700px) {
+            flex-basis: 0;
         }
     }
 
     &__mobile{
         display: none;
-
+    
         @media only screen and (max-width: 700px) {
             display: inline;
         }
@@ -96,13 +127,9 @@
             width: 100%;
             z-index: 49;
         }
-
-        &__icon{
-            font-size: 2rem;
-            margin-right: 1rem;
-        }
-
     }
+
+    
     
 }
 
