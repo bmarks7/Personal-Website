@@ -18,18 +18,18 @@ export default class Resume extends Component {
     return (
       <div className="Resume">
         <div className="Resume__Container">
-          <Header text="Here is my updated resume" />
-          <iframe
+          <Header text="Here is a link to my updated resume" />
+          {/* <iframe
             data-aos="fade-right"
             className="Resume__Container__iframe"
             title="resume"
             src="https://drive.google.com/file/d/1A8uR4nnXR-cEZoRK0gfyOvHwGrseZ7mT/preview"
             allow="autoplay"
-          ></iframe>
+          ></iframe> */}
           <div className="Resume__Container__driveLink">
             <SocialLink
               url="https://drive.google.com/file/d/1A8uR4nnXR-cEZoRK0gfyOvHwGrseZ7mT/preview"
-              name="Link"
+              name=" Resume"
               icon={googleDriveIcon}
             />
           </div>
