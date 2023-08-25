@@ -103,7 +103,9 @@ export default class Experience extends Component {
             title="Software Developer"
             duration="May 2021 - Aug 2021"
             location="London, ON Canada"
-            description="‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> ‐ Managed version control of source code using Git, improving efficiency of programming tasks<br>"
+            description="‐ Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently <br>
+                        ‐ Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800<br> 
+                        ‐ Managed version control of source code using Git, improving efficiency of programming tasks"
             skills={["HTML", "CSS", "JavaScript", "Git", "Godot"]}
           />
         </div>
