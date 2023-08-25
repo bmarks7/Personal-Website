@@ -2,4 +2,4 @@
 
 A personal website I created to share my skills, experiences, projects and other things.
 
-It is at https://brandonmarks.me
+It is at https://brandonm.tech
