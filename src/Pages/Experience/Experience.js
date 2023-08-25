@@ -14,7 +14,7 @@ export default class Experience extends Component {
             org="Rogers Communications"
             title="Automation Specialist Co-op"
             duration="May 2023 - Aug 2023"
-            location="Toronto, ON Canada"
+            location="Brampton, ON Canada"
             description="
                     ‐ Reduced time spent diagnosing and resolving network issues by 80% by enhancing code for performing automated network diagnostics and resolutions using Python, Robot Framework and Jenkins <br>
                     ‐ Reduced processing time of software for automated network diagnostics and resolutions by resolving production environment flaws using Python, Robot Framework, HTML and Jenkins <br>
