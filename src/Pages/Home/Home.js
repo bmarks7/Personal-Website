@@ -29,7 +29,7 @@ export default class Home extends Component {
               data-aos="fade-right"
             >
               <p className="Home__intro__about__description__text">
-                Hi, I'm Brandon! I'm a third-year computer science student at
+                Hi, I'm Brandon! I'm a fourth-year computer science student at
                 Western University in London, Ontario and am based in the
                 Greater Toronto Area.
                 <br />
@@ -39,12 +39,11 @@ export default class Home extends Component {
                 use Python. I am passionate about pushing the boundaries of
                 what's possible with technology. I am interested in becoming a
                 software developer upon graduation so that I can build robust
-                software that can deliver great results.
+                software for users.
                 <br />
                 <br />
-                I have experience building full stack web and mobile
-                applications and I currently plan to learn more about machine
-                learning and cloud computing.
+                Most of my programming experience has been in building full
+                stack web and mobile applications.
                 <br />
                 <br />
                 I'm currently an Automation Specialist Co-op at Rogers
