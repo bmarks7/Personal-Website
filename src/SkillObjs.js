@@ -2,6 +2,7 @@ let skills_list = {
   Java: { level: 80, category: 0 },
   Python: { level: 85, category: 0 },
   JavaScript: { level: 85, category: 0 },
+  TypeScript: { level: 70, category: 0 },
   C: { level: 80, category: 0 },
   "C++": { level: 80, category: 0 },
   HTML: { level: 95, category: 1 },
