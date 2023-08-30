@@ -31,25 +31,27 @@ export default class Home extends Component {
             >
               <p className="Home__intro__about__description__text">
                 Hi, I'm Brandon! I'm a fourth-year computer science student at
-                the University of Western Ontario in London, Ontario and am
-                based in the Greater Toronto Area. My expected graduation date
-                is April 2024.
+                the University of Western Ontario in London, Ontario Canada and
+                am based in the Greater Toronto Area. My expected graduation
+                date is April 2024.
                 <br />
                 <br />
                 Ever since I was a child, I was fascinated by many types of
-                technology, was interested in how these tpyes of technology
-                worked, and had an aptitude for STEM subjects. My programming
-                journey began when I was 12 years old when I attended a STEM
-                summer camp at the University of Toronto where I learned to
-                program using Python. Later on, I decided that I want to become
-                a software developer because I simply enjoy programming and want
-                to build great software for others.
+                technology, was interested in how they worked, and had an
+                aptitude for STEM subjects. My programming journey began when I
+                was 12 years old when I attended a STEM summer camp at the
+                University of Toronto where I learned to program using Python.
+                Later on, I decided that I want to become a software developer
+                because I simply enjoy programming and want to build great
+                software for others.
                 <br />
                 <br />
                 Most of my programming experience has been in building full
                 stack web and mobile applications and I have completed many
                 software development internships during my time in university.
-                I'm excited for my next software development opportunity for
+                <br />
+                <br />
+                I'm currently seeking a software development opportunity for
                 after I graduate from university.
               </p>
             </div>
