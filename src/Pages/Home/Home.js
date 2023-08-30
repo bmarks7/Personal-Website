@@ -6,6 +6,7 @@ import linkedinIcon from "../../Images/linkedinIcon.png";
 import SkillsSection from "../../Components/SkillsList/SkillsList";
 import SocialLink from "../../Components/SocialLink/SocialLink";
 import Header from "../../Components/Header/Header";
+import MeasuredSkill from "../../Components/MeasuredSkill/MeasuredSkill";
 import "./Home.scss";
 
 export default class Home extends Component {
@@ -30,24 +31,26 @@ export default class Home extends Component {
             >
               <p className="Home__intro__about__description__text">
                 Hi, I'm Brandon! I'm a fourth-year computer science student at
-                Western University in London, Ontario and am based in the
-                Greater Toronto Area.
+                the University of Western Ontario in London, Ontario and am
+                based in the Greater Toronto Area. My expected graduation date
+                is April 2024.
                 <br />
                 <br />
-                I started programming when I was 12 years old, when I attended a
-                STEM summer camp at the University of Toronto where I learned to
-                use Python. I am passionate about pushing the boundaries of
-                what's possible with technology. I am interested in becoming a
-                software developer upon graduation so that I can build robust
-                software for users.
+                Ever since I was a child, I was fascinated by many types of
+                technology, was interested in how these tpyes of technology
+                worked, and had an aptitude for STEM subjects. My programming
+                journey began when I was 12 years old when I attended a STEM
+                summer camp at the University of Toronto where I learned to
+                program using Python. Later on, I decided that I want to become
+                a software developer because I simply enjoy programming and want
+                to build great software for others.
                 <br />
                 <br />
                 Most of my programming experience has been in building full
-                stack web and mobile applications.
-                <br />
-                <br />
-                I'm currently an Automation Specialist Co-op at Rogers
-                Communications.
+                stack web and mobile applications and I have completed many
+                software development internships during my time in university.
+                I'm excited for my next software development opportunity for
+                after I graduate from university.
               </p>
             </div>
           </div>
@@ -72,14 +75,16 @@ export default class Home extends Component {
         </div>
 
         <div className="Home__skills">
-          <Header text="Here are some of the technologies I've worked with:" />
-          <p data-aos="fade-right" className="Home__skills__subheader">
-            For each skill, the percentage of it that is filled with the darker
-            color represents how proficient I am in it
-          </p>
+          <Header text="Below are some of the technologies I've worked with:" />
+          <div data-aos="fade-right" className="Home__skills__examples">
+            <MeasuredSkill name="No Proficiency" />
+            <MeasuredSkill name="Mid Proficiency" />
+            <MeasuredSkill name="Full Proficiency" />
+          </div>
+
           <SkillsSection
             title="Programming Languages"
-            skills={["Java", "Python", "JavaScript", "C++", "C"]}
+            skills={["Java", "Python", "JavaScript", "TypeScript", "C++", "C"]}
           />
           <SkillsSection
             title="Front End Technologies"
@@ -94,7 +99,7 @@ export default class Home extends Component {
           />
           <SkillsSection
             title="Back End Technologies"
-            skills={["Node.js", "Flask", "Django", "Spring Boot"]}
+            skills={["Express.js", "Flask", "Django"]}
           />
           <SkillsSection
             title="Databases"
@@ -106,7 +111,7 @@ export default class Home extends Component {
           />
           <SkillsSection
             title="Other"
-            skills={["Git", "AWS", "Jira", "Unix"]}
+            skills={["Git", "AWS", "Jira", "Unix", "GraphQL"]}
           />
         </div>
       </div>
