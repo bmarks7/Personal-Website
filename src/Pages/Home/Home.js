@@ -104,7 +104,7 @@ export default class Home extends Component {
             skills={["Express.js", "Flask", "Django"]}
           />
           <SkillsSection
-            title="Databases"
+            title="Database Technologies"
             skills={["SQL", "MongoDB", "MySQL", "PostgreSQL"]}
           />
           <SkillsSection
