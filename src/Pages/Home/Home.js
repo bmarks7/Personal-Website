@@ -89,7 +89,7 @@ export default class Home extends Component {
             skills={["Java", "Python", "JavaScript", "TypeScript", "C++", "C"]}
           />
           <SkillsSection
-            title="Front End Technologies"
+            title="Front End"
             skills={[
               "HTML",
               "CSS",
@@ -100,12 +100,12 @@ export default class Home extends Component {
             ]}
           />
           <SkillsSection
-            title="Back End Technologies"
+            title="Back End"
             skills={["Express.js", "Flask", "Django"]}
           />
           <SkillsSection
-            title="Database Technologies"
-            skills={["SQL", "MongoDB", "MySQL", "PostgreSQL"]}
+            title="Databases"
+            skills={["SQL", "MongoDB", "MySQL", "PostgreSQL", "SQLAlchemy"]}
           />
           <SkillsSection
             title="AI and Machine Learning"
