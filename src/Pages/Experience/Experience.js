@@ -16,9 +16,9 @@ export default class Experience extends Component {
             duration="May 2023 - Aug 2023"
             location="Brampton, ON Canada"
             descPoints={[
-              "Reduced time spent diagnosing and resolving network issues by 80% by enhancing code for performing automated network diagnostics and resolutions using Python, Robot Framework and Jenkins",
-              "Reduced processing time of software for automated network diagnostics and resolutions by resolving production environment flaws using Python, Robot Framework, HTML and Jenkins",
-              "Improved quality of new software deployed by team members by resolving irregularities in QA environment",
+              "Reduced time spent diagnosing and resolving network issues by 60% by enhancing code for performing automated network diagnostics and resolutions using Python, Robot Framework and Jenkins",
+              "Reduced processing time of software for automated network diagnostics and resolutions by 30% by resolving software issues using Python, Robot Framework, HTML and Jenkins",
+              "Enhanced quality of new software deployed by resolving irregularities in QA environment",
             ]}
             skills={["Python"]}
           />
@@ -77,8 +77,8 @@ export default class Experience extends Component {
             duration="Feb 2022 - May 2022"
             location="Vancouver, BC Canada"
             descPoints={[
-              "Enhanced journaling and support group features on website using React, Express.js and PostgreSQL, improving many users’ experiences",
-              "Coordinated Jira tickets with developers through sprint plannings and stand-ups, and discussed website details with a designer, ensuring efficient completion of tickets",
+              "Enhanced web application’s journaling and support group features for 100+ users using PERN Stack and Prisma",
+              "Collaborated with developers on agile team through sprint plannings, stand-ups and other meetings",
             ]}
             skills={[
               "React",
@@ -96,8 +96,9 @@ export default class Experience extends Component {
             duration="Jul 2021 - Jan 2022"
             location="London, ON Canada"
             descPoints={[
-              "Implementing responsive design and maintainable code using React, Sass, Node.js and MongoDB, creating a user-friendly website for 200 hackathon participants",
-              "Collaborating with 2 other developers by performing code reviews and managing version control ofsource code on Git using industry best practices, increasing development progress",
+              "Raised $40K+ in sponsorship for hackathon with 100+ attendees by creating hackathon website with 10K+ visits using MERN Stack, Sass and responsive design",
+              "Helped team win 2022 HSBC Entrepreneurship Project Accelerator, Best Project in Canada award",
+              "Increased development progress by 30% by collaborating with 4 developers through code reviews and sprint plannings",
             ]}
             skills={["React", "Sass", "Node.js", "MongoDB", "Git"]}
           />
@@ -108,9 +109,9 @@ export default class Experience extends Component {
             duration="May 2021 - Aug 2021"
             location="London, ON Canada"
             descPoints={[
-              "Enhanced features and user interface of online core viewer tool using HTML, CSS and JavaScript,improving the experiences of 30 clients who use it frequently",
-              "Developed an interactive virtual reality application for GIS data exploration on Oculus Quest, using Godot and GDScript, enhancing client experiences and reducing annual costs by $400 - $1800",
-              "Managed version control of source code using Git, improving efficiency of programming tasks",
+              "Enhanced features and UI of core sample viewer for 30 frequent users using HTML, CSS and JavaScript",
+              "Improved data retrieval for geologists by debugging SQL queries in MySQL",
+              "Reduced annual costs by $400 - $1800 and enhanced client experiences by developing VR application for geographical data visualization on Oculus Quest using Godot and GDScript",
             ]}
             skills={["HTML", "CSS", "JavaScript", "Git", "Godot"]}
           />
