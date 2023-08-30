@@ -46,8 +46,8 @@ export default class Home extends Component {
                 software for others.
                 <br />
                 <br />
-                Most of my programming experience has been in building full
-                stack web and mobile applications and I have completed many
+                Most of my programming experience has been in full stack
+                development for web and mobile applications. I completed many
                 software development internships during my time in university.
                 <br />
                 <br />
