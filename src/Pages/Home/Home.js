@@ -105,7 +105,7 @@ export default class Home extends Component {
           />
           <SkillsSection
             title="Databases"
-            skills={["SQL", "MongoDB", "MySQL", "PostgreSQL", "SQLAlchemy"]}
+            skills={["SQL", "MongoDB", "MySQL", "PostgreSQL", "SQLite"]}
           />
           <SkillsSection
             title="AI and Machine Learning"

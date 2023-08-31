@@ -40,7 +40,7 @@ let skills_list = {
   "scikit-learn": { level: 25, category: skillCategories.ai },
   jQuery: { level: 50, category: skillCategories.frontend },
   GCP: { level: 20, category: skillCategories.other },
-  SQLAlchemy: { level: 30, category: skillCategories.database },
+  SQLite: { level: 30, category: skillCategories.database },
   Sass: { level: 70, category: skillCategories.frontend },
   "MS Access": { level: 75, category: skillCategories.database },
   Godot: { level: 60, category: skillCategories.other },

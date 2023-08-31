@@ -66,14 +66,14 @@ export default class Experience extends Component {
 
           <ExperienceSection
             org="Honest Empathy"
-            title="Software Engineer"
+            title="Software Engineer Intern"
             duration="Feb 2022 - May 2022"
             location="Vancouver, BC Canada"
             descPoints={[
               "Enhanced web application’s journaling and support group features for 100+ users using PERN Stack and Sequelize",
               "Collaborated with developers on agile team through sprint plannings, stand-ups and other meetings",
             ]}
-            skills={["React", "Express", "PostgreSQL", "Jira", "JavaScript"]}
+            skills={["React", "Express", "PostgreSQL", "JavaScript"]}
           />
 
           <ExperienceSection

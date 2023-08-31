@@ -79,7 +79,7 @@ export default class Other extends Component {
           event="DeltaHacks"
           duration="Jan 2022"
           description="A web application that helps people improve their public speaking skills by analyzing audio and using AssemblyAI API"
-          skills={["React", "Flask", "SQLAlchemy"]}
+          skills={["React", "Flask", "SQLite"]}
           links={[
             {
               name: "DevPost",
