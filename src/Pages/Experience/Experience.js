@@ -20,7 +20,7 @@ export default class Experience extends Component {
               "Reduced processing time of software for automated network diagnostics and resolutions by 30% by resolving software issues using Python, Robot Framework, HTML and Jenkins",
               "Enhanced quality of new software deployed by resolving irregularities in QA environment",
             ]}
-            skills={["Python"]}
+            skills={["Python", "HTML"]}
           />
 
           <ExperienceSection
@@ -31,7 +31,7 @@ export default class Experience extends Component {
             descPoints={[
               "Enabled users with expired bank account credentials to reauthorize with banks using React Native, TypeScript, GraphQL, MongoDB and Plaid API",
               "Developed API for managing users’ personal preferences using TypeScript, GraphQL and MongoDB",
-              "Reduced usage costs of third party API by 70% and reduced currency conversion microservice latency by 50% by implementing cache using TypeScript and MongoDB",
+              "Reduced usage costs of third party API by 70% and reduced latency of currency conversion API by 50% by implementing cache using TypeScript and MongoDB",
               "Practiced test-driven development by writing TypeScript unit tests using Jest",
               "Enhanced user experience by adding new UI elements using React Native",
             ]}
