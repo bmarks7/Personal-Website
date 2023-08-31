@@ -38,12 +38,12 @@ export default class Home extends Component {
                 <br />
                 Ever since I was a child, I was fascinated by many types of
                 technology, was interested in how they worked, and had an
-                aptitude for STEM subjects. My programming journey began when I
-                was 12 years old and attended a STEM summer camp at the
-                University of Toronto where I learned to program using Python.
-                Later on, I decided that I wanted to become a software developer
-                because I simply enjoyed programming and wanted to build great
-                software for others.
+                aptitude for STEM subjects. When I was 12 years old, I attended
+                a STEM summer camp at the University of Toronto where I learned
+                to program using Python, and that's where my programming journey
+                began. Later on, I decided that I wanted to become a software
+                developer because I simply enjoyed programming and wanted to
+                build great software for others.
                 <br />
                 <br />
                 Most of my programming experience has been in full stack
