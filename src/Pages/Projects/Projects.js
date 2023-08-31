@@ -12,27 +12,6 @@ export default class Other extends Component {
         <Header text="Here are projects I created at hackathons:" />
 
         <ProjectsSection
-          name="Buildnow"
-          event="GryphHacks"
-          duration="May 2022"
-          description="A web application using Google Natural Language API and web scraping to help people search for websites and videos more efficiently."
-          skills={["React", "Python", "Flask"]}
-          links={[
-            {
-              name: "DevPost",
-              url: "https://devpost.com/software/buildnow",
-              icon: devpostIcon,
-            },
-            {
-              name: "GitHub",
-              url: "https://github.com/bmarks7/GryphHacks2022",
-              icon: githubIcon,
-            },
-          ]}
-          // img = {newLiveLogo}
-        />
-
-        <ProjectsSection
           name="SpeechFinder"
           event="HawkHacks"
           duration="May 2022"
