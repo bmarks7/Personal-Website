@@ -61,14 +61,7 @@ export default class Experience extends Component {
               "Enabled users to modify profile information on settings page using PERN Stack and Prisma",
               "Resolved issues and enhanced UI in several pages of web application using React and Material UI",
             ]}
-            skills={[
-              "React",
-              "Express",
-              "PostgreSQL",
-              "AWS",
-              "Git",
-              "JavaScript",
-            ]}
+            skills={["React", "Express", "PostgreSQL", "AWS", "JavaScript"]}
           />
 
           <ExperienceSection
@@ -77,17 +70,10 @@ export default class Experience extends Component {
             duration="Feb 2022 - May 2022"
             location="Vancouver, BC Canada"
             descPoints={[
-              "Enhanced web application’s journaling and support group features for 100+ users using PERN Stack and Prisma",
+              "Enhanced web application’s journaling and support group features for 100+ users using PERN Stack and Sequelize",
               "Collaborated with developers on agile team through sprint plannings, stand-ups and other meetings",
             ]}
-            skills={[
-              "React",
-              "Express",
-              "PostgreSQL",
-              "Jira",
-              "Git",
-              "JavaScript",
-            ]}
+            skills={["React", "Express", "PostgreSQL", "Jira", "JavaScript"]}
           />
 
           <ExperienceSection
@@ -100,7 +86,7 @@ export default class Experience extends Component {
               "Helped team win 2022 HSBC Entrepreneurship Project Accelerator, Best Project in Canada award",
               "Increased development progress by 30% by collaborating with 4 developers through code reviews and sprint plannings",
             ]}
-            skills={["React", "Sass", "Node.js", "MongoDB", "Git"]}
+            skills={["React", "Sass", "Node.js", "MongoDB"]}
           />
 
           <ExperienceSection
@@ -113,7 +99,7 @@ export default class Experience extends Component {
               "Improved data retrieval for geologists by debugging SQL queries in MySQL",
               "Reduced annual costs by $400 - $1800 and enhanced client experiences by developing VR application for geographical data visualization on Oculus Quest using Godot and GDScript",
             ]}
-            skills={["HTML", "CSS", "JavaScript", "Git", "Godot"]}
+            skills={["HTML", "CSS", "JavaScript", "Godot"]}
           />
         </div>
 
@@ -128,7 +114,7 @@ export default class Experience extends Component {
             descPoints={[
               "Developing a new website for the Computer Science Undergraduate Society at Western University",
             ]}
-            skills={["React", "Git"]}
+            skills={["React"]}
           />
 
           <ExperienceSection
