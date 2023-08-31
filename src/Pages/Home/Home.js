@@ -41,8 +41,8 @@ export default class Home extends Component {
                 aptitude for STEM subjects. My programming journey began when I
                 was 12 years old when I attended a STEM summer camp at the
                 University of Toronto where I learned to program using Python.
-                Later on, I decided that I want to become a software developer
-                because I simply enjoy programming and want to build great
+                Later on, I decided that I wanted to become a software developer
+                because I simply enjoyed programming and wanted to build great
                 software for others.
                 <br />
                 <br />
