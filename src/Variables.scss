@@ -1,61 +1,61 @@
 @mixin pageButtonHover($translateY) {
-    &:hover{
-        transform: translateY($translateY);
-        box-shadow: 0 1rem 3rem rgba(0,0,0,.25);
-        background-color: $light-blue;
-    }
+  &:hover {
+    transform: translateY($translateY);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+    background-color: $light-blue;
+  }
 }
 
 @mixin pageButtonNotHover {
-    background-color: $base-color;
-    box-shadow: none;
-    cursor: pointer;
-    transition: all $animation_duration;  
+  background-color: $base-color;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all $animation_duration;
 }
 
 @mixin pageSettings($width) {
-    margin: auto;
-    width: $width;
-    margin-top: 5vh;
-    margin-bottom: 15vh;
-    height: 100%;
+  margin: auto;
+  width: $width;
+  margin-top: 5vh;
+  margin-bottom: 15vh;
 
-    @media only screen and (max-width: 1000px) {
-        width: 84%;
-    }
+  @media only screen and (max-width: 1000px) {
+    width: 84%;
+  }
 }
 
-@mixin downPointerProps{
-    width: $downPointer-width;
-    height: $downPointer-height;
-    transition: all $animation_duration; 
-    @media only screen and (max-width: 700px) {
-        width: 2rem;
-        height: 2rem;
-    }
+@mixin downPointerProps {
+  width: $downPointer-width;
+  height: $downPointer-height;
+  transition: all $animation_duration;
+  @media only screen and (max-width: 700px) {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
-@mixin sectionHeaderProps{
-    background-color: $base-color;
-    border-radius: 15px;
-    transition: background-color $animation_duration, box-shadow $animation_duration, transform $animation_duration;
-    cursor: pointer;
-    padding: 1rem 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+@mixin sectionHeaderProps {
+  background-color: $base-color;
+  border-radius: 15px;
+  transition: background-color $animation_duration,
+    box-shadow $animation_duration, transform $animation_duration;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@mixin sectionContentProps{
-    background-color: $base-color;
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: 0rem 1rem 3rem rgba(0,0,0,.25);
+@mixin sectionContentProps {
+  background-color: $base-color;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0rem 1rem 3rem rgba(0, 0, 0, 0.25);
 }
 
 $header-color: white;
 $base-color: white;
-$background-left: #003399;
-$background-right: #6696ff;
+$background-left: #002265;
+$background-right: #105cff;
 $text-color: #001a4d;
 $text-color2: white;
 
@@ -64,16 +64,16 @@ $light-blue: #e6eeff;
 $downPointer-height: 2.5rem;
 $downPointer-width: 2.5rem;
 
-$animation_duration: .5s;
+$animation_duration: 0.5s;
 
-:export{
-    headerColor: $header-color;
-    baseColor: $base-color;
-    backgroundLeft: $background-left;
-    backgroundRight: $background-right;
-    textColor: $text-color;
-    textColor2: $text-color2;
-    lightBlue: $light-blue;
-    downPointerHeight: $downPointer-height;
-    downPointerWidth: $downPointer-width;
+:export {
+  headerColor: $header-color;
+  baseColor: $base-color;
+  backgroundLeft: $background-left;
+  backgroundRight: $background-right;
+  textColor: $text-color;
+  textColor2: $text-color2;
+  lightBlue: $light-blue;
+  downPointerHeight: $downPointer-height;
+  downPointerWidth: $downPointer-width;
 }

@@ -74,81 +74,9 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <Header text="If you would like to connect with me, please fill out the form below and I'll get back to you by email" />
-        <form
-          className="Contact__form"
-          onSubmit={this.sendEmail}
-          data-aos="fade-right"
-        >
-          <label className="Contact__form__nameLabel">Name:</label>
-          <input
-            required
-            className="Contact__form__nameInput"
-            type="text"
-            name="sender_name"
-          />
-
-          <label className="Contact__form__subjectLabel">Subject:</label>
-          <input
-            required
-            className="Contact__form__subjectInput"
-            type="text"
-            name="subject"
-          />
-
-          <label className="Contact__form__messageLabel">Message:</label>
-          <textarea
-            required
-            className="Contact__form__messageInput"
-            id=""
-            cols="30"
-            rows="10"
-            name="message"
-          ></textarea>
-
-          <label className="Contact__form__emailLabel">
-            Your Email Address:
-          </label>
-          <input
-            onChange={this.validateEmail}
-            required
-            className="Contact__form__emailInput"
-            type="text"
-            placeholder="e.g. brandonmarks@gmail.com"
-            name="sender_email"
-          />
-          <p className="Contact__form__emailError">
-            {this.state.emailValid
-              ? "Valid Email"
-              : "Please Enter a Valid Email"}
-          </p>
-
-          <div className="Contact__form__btnContainer">
-            <input
-              className="Contact__form__btnContainer__sendBtn"
-              type="submit"
-              value="Send"
-            />
-          </div>
-        </form>
-
-        <Snackbar
-          anchorOrigin={{
-            vertical: "bottom",
-            horizontal: "left",
-          }}
-          open={this.state.open}
-          autoHideDuration={6000}
-          onClose={this.handleClose}
-          message="Message Sent"
-          action={
-            <React.Fragment>
-              <IconButton onClick={this.handleClose}>
-                <CloseIcon />
-              </IconButton>
-            </React.Fragment>
-          }
-        />
+        <p className="Contact__text" data-aos="fade-right">
+          You can reach out to me by email at brandon14.marks@gmail.com
+        </p>
       </div>
     );
   }

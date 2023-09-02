@@ -57,7 +57,6 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-
         <div className="Home__links">
           <SocialLink
             url="https://www.linkedin.com/in/brandonm3/"
@@ -75,7 +74,6 @@ export default class Home extends Component {
             icon={devpostIcon}
           />
         </div>
-
         <div className="Home__skills">
           <Header text="Below are some of the technologies I've worked with:" />
           <div data-aos="fade-right" className="Home__skills__examples">

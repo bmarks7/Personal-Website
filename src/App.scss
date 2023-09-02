@@ -1,13 +1,15 @@
-@import './Variables.scss';
+@import "./Variables.scss";
 
-.App{
-  background-image: linear-gradient(to right, $background-left, $background-right);
+.App {
+  background-image: linear-gradient(
+    to right,
+    $background-left,
+    $background-right
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
-  min-height: 1000px;
-
-  &__content{
-    position: relative;
-  }
+  min-height: 100vh;
 }
-
-
