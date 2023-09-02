@@ -15,7 +15,7 @@ export default class Other extends Component {
           name="SpeechFinder"
           event="HawkHacks"
           duration="May 2022"
-          description="A web application that brings underheard voices to the center of a stronger public dialogue by allowing users — whether individuals or nonprofits — to contribute stories for civic action"
+          description="A web application that brings underheard voices to the center of a stronger public dialogue by allowing users — whether individuals or nonprofits — to contribute stories for civic action."
           skills={["React", "Python", "Flask", "SQLite"]}
           links={[
             {
@@ -57,7 +57,7 @@ export default class Other extends Component {
           name="UmmLess.tech"
           event="DeltaHacks"
           duration="Jan 2022"
-          description="A web application that helps people improve their public speaking skills by analyzing audio using AssemblyAI API"
+          description="A web application that helps people improve their public speaking skills by analyzing audio using AssemblyAI API."
           skills={["React", "Flask", "Python", "SQLite"]}
           links={[
             {
@@ -78,7 +78,7 @@ export default class Other extends Component {
           name="Ghost Runner"
           event="Hack Western"
           duration="Nov 2020"
-          description="A mobile application that allows users to record their runs in the form of ghosts (playable recorded runs) which record the distance that a user travels at certain times and allows their runs to be replayed and challenged by other users that want to beat their times. "
+          description="A mobile application that allows users to record their runs in the form of ghosts (playable recorded runs) which record the distance that a user travels at certain times and allows their runs to be replayed and challenged by other users who want to beat their times."
           skills={["GCP", "JavaScript", "MongoDB", "React Native"]}
           links={[
             {
@@ -94,7 +94,7 @@ export default class Other extends Component {
           name="Fooder"
           event="eHacks"
           duration="Feb 2020"
-          description="An application that tracks personal grocery habits and nutritional information through user grocery purchases, highlights potential deficiencies, and suggests foods to improve dietary health"
+          description="An application that tracks personal grocery habits and nutritional information through user grocery purchases, highlights potential deficiencies, and suggests foods to improve dietary health."
           skills={[
             "Bootstrap",
             "CSS",
@@ -124,7 +124,7 @@ export default class Other extends Component {
           name="brandonm.tech (This website)"
           event=""
           duration="Jan 2022 - Present"
-          description="I made this personal website using React and Sass, and host it on GitHub Pages"
+          description="I made this personal website using React and Sass, and host it on GitHub Pages."
           skills={["React", "Sass"]}
           links={[
             {
@@ -140,7 +140,7 @@ export default class Other extends Component {
           name="New Live"
           event=""
           duration="Aug 2020 - Sep 2020"
-          description="A mobile application that makes it easy for landlords to find potential tenants and for people to find places to stay"
+          description="A mobile application that makes it easy for landlords to find potential tenants and for people to find places to stay."
           skills={["React Native", "Express.js", "MongoDB", "GCP"]}
           links={[
             {
@@ -156,7 +156,7 @@ export default class Other extends Component {
           name="Marks Blog"
           event=""
           duration="Dec 2019 - Jan 2020"
-          description="A web application where users can create and manage accounts, post blogs, and view the blogs of other users for any topic"
+          description="A web application where users can create and manage accounts, post blogs, and view the blogs of other users for any topic."
           skills={["Python", "Django", "HTML", "Bootstrap", "jQuery"]}
           links={[
             {

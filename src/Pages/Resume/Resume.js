@@ -18,7 +18,7 @@ export default class Resume extends Component {
     return (
       <div className="Resume">
         <div className="Resume__Container">
-          <Header text="Here is my updated resume" />
+          <Header text="Here is my updated resume:" />
           <iframe
             data-aos="fade-right"
             className="Resume__Container__iframe"

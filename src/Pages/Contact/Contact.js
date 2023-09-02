@@ -12,7 +12,6 @@ export default class Contact extends Component {
     super(props);
     this.state = {
       open: false,
-      emailError: "",
       emailValid: false,
     };
     this.handleClose = this.handleClose.bind(this);
@@ -34,12 +33,10 @@ export default class Contact extends Component {
 
     if (validator.isEmail(email)) {
       this.setState({
-        emailError: "Valid Email",
         emailValid: true,
       });
     } else {
       this.setState({
-        emailError: "Please enter a valid Email",
         emailValid: false,
       });
     }
@@ -69,6 +66,7 @@ export default class Contact extends Component {
 
       this.setState({
         open: true,
+        emailValid: false,
       });
     }
   }
@@ -119,7 +117,11 @@ export default class Contact extends Component {
             placeholder="e.g. brandonmarks@gmail.com"
             name="sender_email"
           />
-          <p className="Contact__form__emailError">{this.state.emailError}</p>
+          <p className="Contact__form__emailError">
+            {this.state.emailValid
+              ? "Valid Email"
+              : "Please Enter a Valid Email"}
+          </p>
 
           <div className="Contact__form__btnContainer">
             <input

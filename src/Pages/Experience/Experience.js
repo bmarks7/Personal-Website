@@ -61,7 +61,7 @@ export default class Experience extends Component {
               "Enabled users to modify profile information on settings page using PERN Stack and Prisma",
               "Resolved issues and enhanced UI in several pages of web application using React and Material UI",
             ]}
-            skills={["React", "Express", "PostgreSQL", "AWS", "JavaScript"]}
+            skills={["React", "Express.js", "PostgreSQL", "AWS", "JavaScript"]}
           />
 
           <ExperienceSection
@@ -73,7 +73,7 @@ export default class Experience extends Component {
               "Enhanced web application’s journaling and support group features for 100+ users using PERN Stack and Sequelize",
               "Collaborated with developers on agile team through sprint plannings, stand-ups and other meetings",
             ]}
-            skills={["React", "Express", "PostgreSQL", "JavaScript"]}
+            skills={["React", "Express.js", "PostgreSQL", "JavaScript"]}
           />
 
           <ExperienceSection
