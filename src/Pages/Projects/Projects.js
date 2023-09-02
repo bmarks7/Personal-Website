@@ -58,7 +58,7 @@ export default class Other extends Component {
           event="DeltaHacks"
           duration="Jan 2022"
           description="A web application that helps people improve their public speaking skills by analyzing audio using AssemblyAI API"
-          skills={["React", "Flask", "SQLite"]}
+          skills={["React", "Flask", "Python", "SQLite"]}
           links={[
             {
               name: "DevPost",
@@ -141,7 +141,7 @@ export default class Other extends Component {
           event=""
           duration="Aug 2020 - Sep 2020"
           description="A mobile application that makes it easy for landlords to find potential tenants and for people to find places to stay"
-          skills={["React Native", "Node.js", "MongoDB", "GCP"]}
+          skills={["React Native", "Express.js", "MongoDB", "GCP"]}
           links={[
             {
               name: "GitHub",
