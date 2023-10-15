@@ -23,12 +23,12 @@ export default class Resume extends Component {
             data-aos="fade-right"
             className="Resume__Container__iframe"
             title="resume"
-            src="https://drive.google.com/file/d/1A8uR4nnXR-cEZoRK0gfyOvHwGrseZ7mT/preview"
+            src="https://drive.google.com/file/d/1iha-SBOeXRD2PXZL9TfWx-DOeebuSC7s/view?usp=sharing"
             allow="autoplay"
           ></iframe>
           <div className="Resume__Container__driveLink">
             <SocialLink
-              url="https://drive.google.com/file/d/1A8uR4nnXR-cEZoRK0gfyOvHwGrseZ7mT/preview"
+              url="https://drive.google.com/file/d/1iha-SBOeXRD2PXZL9TfWx-DOeebuSC7s/view?usp=sharing"
               name="Resume Link"
               icon={googleDriveIcon}
             />
