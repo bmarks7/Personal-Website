@@ -28,7 +28,7 @@ export default class Resume extends Component {
           ></iframe>
           <div className="Resume__Container__driveLink">
             <SocialLink
-              url="https://drive.google.com/file/d/1JcYsr4QOWFAsAqvaB59U8PZh32MzpZ1V/preview"
+              url="https://drive.google.com/file/d/1JcYsr4QOWFAsAqvaB59U8PZh32MzpZ1V/view?usp=sharing"
               name="Resume Link"
               icon={googleDriveIcon}
             />
