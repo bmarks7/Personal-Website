@@ -75,7 +75,13 @@ export default class Contact extends Component {
     return (
       <div className="Contact">
         <p className="Contact__text" data-aos="fade-right">
-          You can reach out to me by email at brandon14.marks@gmail.com
+          You can reach out to me by email at{" "}
+          <a
+            style={{ color: "#949191" }}
+            href="mailto:brandon14.marks@gmail.com"
+          >
+            brandon14.marks@gmail.com
+          </a>
         </p>
       </div>
     );
