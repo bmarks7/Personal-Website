@@ -121,7 +121,7 @@ export default class Other extends Component {
         <Header text="And here are projects I worked on independently in my own time:" />
 
         <ProjectsSection
-          name="brandonm.tech (This website)"
+          name="brandonm.me (This website)"
           event=""
           duration="Jan 2022 - Present"
           description="I made this personal website using React and Sass, and host it on GitHub Pages."
